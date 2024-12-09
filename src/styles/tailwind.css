@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .article {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+
+  .scroll-snap {
+    scroll-snap-align: start;
+  } */
+  /*FONTS*/
+
+  h1,
+  h2,
+  h3,
+  p,
+  label {
+    color: whitesmoke;
+  }
+
+  p,
+  h3,
+  h2,
+  button,
+  input,
+  label {
+    font-family: "Crimson Text";
+  }
+
+  h1 {
+    font-family: "Codystar";
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  span {
+    background-color: black;
+  }
+
+  /*FORMS*/
+
+  input {
+    background-color: #640923;
+    border-style: none;
+  }
+
+  input[type="radio"]:checked,
+  input[type="checkbox"]:checked {
+    color: #640923;
+    border-color: #ff1054;
+  }
+
+  .form-baggrund {
+    background-color: #a03758;
+  }
+
+  /*ANDRE*/
+
+  a {
+    color: #ff1054;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .plastik-i-havene,
+  .måge,
+  .sæl,
+  .syv-råd {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  .scale:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+  }
+
+  .scale {
+    transition: transform 0.2s;
+    transform-origin: center;
+  }
+}
