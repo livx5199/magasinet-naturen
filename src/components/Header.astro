@@ -1,5 +1,201 @@
 ---
 import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
-import logo from "../assets/images/logo.webp";
+import logo from "../assets/images/logoer/logo.svg";
+import kurv from "../assets/images/grafikker/kurv.svg";
+import lup from "../assets/images/grafikker/lup.svg";
 ---
+
+<section
+  class="bg-brown-900 p-5 flex items-center justify-between desktop-menu"
+>
+  <a href="https://www.hojskolendk.dk"
+    ><Image alt="Magasinet Naturen logo" src={logo} class="w-24" /></a
+  >
+  <ul class="flex text-brown-50 gap-4">
+    <li class="list-none navtext">FORSIDE</li>
+    <li class="list-none navtext">ARTIKLER</li>
+    <li class="list-none navtext">OM OS</li>
+    <li class="list-none navtext">SHOP</li>
+  </ul>
+  <div class="flex">
+    <Button />
+    <div class="flex gap-5 items-center">
+      <Image alt="Magasinet Naturen logo" src={lup} class="w-3" />
+      <Image alt="Magasinet Naturen logo" src={kurv} class="w-3" />
+    </div>
+  </div>
+</section>
+
+<!-- BURGER MENU -->
+<section class="top-nav bg-brown-900 p-5 flex justify-around items-center">
+  <div class="flex gap-3 items-center">
+    <a href="https://www.hojskolendk.dk"
+      ><Image alt="Magasinet Naturen logo" src={logo} class="w-24" /></a
+    >
+
+    <Button />
+    <div class="flex gap-5 items-center">
+      <Image alt="Magasinet Naturen logo" src={lup} class="w-3" />
+      <Image alt="Magasinet Naturen logo" src={kurv} class="w-3" />
+    </div>
+  </div>
+
+  <div>
+    <div class="">
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul class="menu text-brown-50">
+        <li class="list-none navtext">FORSIDE</li>
+        <li class="list-none navtext">ARTIKLER</li>
+        <li class="list-none navtext">OM OS</li>
+        <li class="list-none navtext">SHOP</li>
+      </ul>
+    </div>
+  </div>
+
+  <style>
+    h2 {
+      vertical-align: center;
+      text-align: center;
+    }
+
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+    }
+
+    .top-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu > li {
+      margin: 0 1rem;
+      overflow: hidden;
+    }
+
+    li:hover {
+      color: #c8ff85;
+      cursor: pointer;
+    }
+
+    .menu-button-container {
+      display: none;
+      height: 100%;
+      width: 30px;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+      display: block;
+      background-color: #f1f1ed;
+      position: absolute;
+      height: 4px;
+      width: 30px;
+      transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      border-radius: 2px;
+    }
+
+    .menu-button::before {
+      content: "";
+      margin-top: -8px;
+    }
+
+    .menu-button::after {
+      content: "";
+      margin-top: 8px;
+    }
+
+    #menu-toggle:checked + .menu-button-container .menu-button::before {
+      margin-top: 0px;
+      transform: rotate(405deg);
+    }
+
+    #menu-toggle:checked + .menu-button-container .menu-button {
+      background: rgba(255, 255, 255, 0);
+    }
+
+    #menu-toggle:checked + .menu-button-container .menu-button::after {
+      margin-top: 0px;
+      transform: rotate(-405deg);
+    }
+
+    @media (min-width: 1024px) {
+      .top-nav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .menu-button-container {
+        display: flex;
+      }
+      .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 100px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      #menu-toggle:checked ~ .menu li {
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        background-color: #161512;
+      }
+      /* .menu > li:not(:last-child) {
+        color: #f1f1ed;
+      } */
+    }
+
+    .desktop-menu {
+      display: none;
+    }
+
+    @media screen and (min-width: 1024px) {
+      .desktop-menu {
+        display: flex;
+      }
+    }
+  </style>
+</section>
