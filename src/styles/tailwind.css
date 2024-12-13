@@ -12,6 +12,10 @@
     @apply font-display;
   }
 
+  .navtext-footer {
+    @apply text-brown-50 text-xsmall;
+  }
+
   h1 {
     @apply text-xxlarge;
   }
@@ -25,7 +29,8 @@
   }
 
   h4,
-  p {
+  p,
+  li {
     @apply font-standard;
   }
 
@@ -40,5 +45,21 @@
     @apply font-display;
   }
 
-  /* Sections */
+  /* Forms */
+
+  input {
+    @apply bg-green-100 rounded-rounded p-2 font-standard text-green-950;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-green-800;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
 }

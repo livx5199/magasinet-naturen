@@ -1,10 +1,80 @@
 ---
 import Button from "./Button.astro";
 import { Image } from "astro:assets";
-import xlogo from "../assets/images/x-logo.webp";
-import youtubelogo from "../assets/images/youtube-logo.webp";
-import instagramlogo from "../assets/images/instagram-logo.webp";
-import linkedinlogo from "../assets/images/linkedin-logo.webp";
-import logo from "../assets/images/logo.webp";
-import facebooklogo from "../assets/images/facebook-logo.webp";
+import logo from "../assets/images/logoer/logo.svg";
+import instagramlogo from "../assets/images/logoer/insta-logo.svg";
+import facebooklogo from "../assets/images/logoer/fb-logo.svg";
 ---
+
+<div class="flex flex-col justify-center bg-green-500 p-5 text-center gap-5">
+  <h3>FÅ DE BEDSTE HISTORIER OM NATUREN I DIN INDBAKKE</h3>
+  <h4>
+    Tilmeld dig gratis Magasinet Naturens nyhedsbrev og få besked om nye
+    artikler, samt andre fordele.
+  </h4>
+  <div class="flex flex-col lg:flex-row justify-center gap-2">
+    <input type="text" placeholder="Navn" />
+    <input type="text" placeholder="E-mail" />
+  </div>
+  <Button />
+</div>
+<div class="flex flex-col justify-center bg-brown-900 p-5">
+  <div class="flex flex-col lg:flex-row justify-center lg:justify-between">
+    <div
+      class="flex flex-col items-center text-center navtext-footer p-5 gap-5"
+    >
+      <Image alt="Magasinet Naturen logo" src={logo} class="w-24" />
+      <p class="text-xsmall">
+        Udgiver: Hakon Holm Publishing ApS<br />
+        Sankt Mortens Gade 18<br />
+        3700 Rønne
+      </p>
+    </div>
+    <div
+      class="flex flex-col items-center text-center navtext-footer p-5 gap-5"
+    >
+      <h4 class="font-display text-small">ABONNEMENT & SHOP</h4>
+      <ul class="flex flex-col gap-2">
+        <li><a href="">Køb abonnement</a></li>
+        <li><a href="">Shop</a></li>
+        <li><a href="">Din kurv</a></li>
+        <li><a href="">Vejledning til abonnement</a></li>
+        <li><a href="">FAQ - Ofte stillede spørgsmål</a></li>
+        <li><a href="">Handelsbetingelser</a></li>
+        <li><a href="">Min konto/Login</a></li>
+      </ul>
+    </div>
+    <div
+      class="flex flex-col items-center text-center navtext-footer p-5 gap-5"
+    >
+      <h4 class="font-display text-small">FØLG OS</h4>
+
+      <a href=""
+        ><div class="flex gap-2 items-center">
+          <Image alt="Facebook logo" src={facebooklogo} class="w-4" />
+          <p class="text-xsmall">Facebook</p>
+        </div></a
+      >
+
+      <a href=""
+        ><div class="flex gap-2 items-center">
+          <Image alt="Instagram logo" src={instagramlogo} class="w-4" />
+          <p class="text-xsmall">Instagram</p>
+        </div></a
+      >
+      <p class="text-xsmall w-72">
+        Følg Magasinet Naturen på Facebook og Instagram. Læs spændende
+        historier, deltag i debatter og del dine historier og billeder fra
+        naturen i Danmark.
+      </p>
+    </div>
+  </div>
+  <div
+    class="flex flex-col lg:flex-row lg:justify-between items-center text-center navtext-footer p-5 gap-5"
+  >
+    <p class="text-xsmall">Copyright © 2024 Magasinet Naturen / Hakon Holm</p>
+    <p class="text-xsmall">
+      Cookie- og privatlivspolitik // Handelsbetingelser
+    </p>
+  </div>
+</div>
