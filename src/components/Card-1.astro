@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import Temakort from "./Temakort.astro";
+
+const {
+  cardimage = "",
+  cardimagealt = "",
+
+  temakortvariant = "",
+  tema = "",
+  titel = "",
+} = Astro.props;
+---
+
+<article
+  class="grid grid-rows-4 grid-cols-2 rounded-rounded w-72 h-[35rem] shadow-drop25 hover:transition duration-300 hover:scale-105"
+>
+  <img
+    src={cardimage}
+    alt={cardimagealt}
+    class="row-start-1 col-start-1 row-span-4 col-span-2 object-cover w-full h-full rounded-rounded"
+  />
+  <div class="col-start-1 col-span-1 row-start-1 row-span-1 p-2">
+    <Temakort variant={temakortvariant}>{tema}</Temakort>
+  </div>
+
+  <h3
+    class="row-start-3 row-span-2 col-start-1 col-span-2 m-3 text-center self-center"
+  >
+    <span class="bg-green-50">{titel}</span>
+  </h3>
+</article>

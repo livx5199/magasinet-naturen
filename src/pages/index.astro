@@ -1,9 +1,27 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Card1 from "../components/Card-1.astro";
+import Card2 from "../components/Card-2.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import balloons from "../assets/images/balloons.webp";
+import oern from "../assets/images/artikler/artikel-ørn.webp";
 ---
 
-<MainLayout title="Titel"> <Button>Hej</Button></MainLayout>
+<MainLayout title="Titel">
+  <section class="m-10 flex gap-5">
+    <Card1
+      cardimage="src/assets/images/artikler/mosaik-fjerkoelle-svamp-foto-thomas-laessoee.webp"
+      tema="Fauna"
+      temakortvariant="fauna"
+      titel="ÅKANDE-KÆRGULDSMED FUNDET PÅ FALSTER"
+    />
+
+    <Card2
+      cardimage="src/assets/images/artikler/mosaik-fjerkoelle-svamp-foto-thomas-laessoee.webp"
+      tema="Fauna"
+      temakortvariant="fauna"
+      titel="ÅKANDE-KÆRGULDSMED FUNDET PÅ FALSTER"
+    />
+  </section>
+</MainLayout>

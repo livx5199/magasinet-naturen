@@ -83,7 +83,7 @@ export default {
             xsmall: ["0.7rem", { lineHeight: "0.9rem" }],
             small: ["1rem", { lineHeight: "1.2rem" }],
             medium: ["1.3rem", { lineHeight: "1.5rem" }],
-            large: ["2.074rem", { lineHeight: "2.2rem" }],
+            large: ["1.9rem", { lineHeight: "2.2rem" }],
             xlarge: ["2.488rem", { lineHeight: "2.6rem" }],
             xxlarge: ["2.986rem", { lineHeight: "3rem" }],
         },
@@ -103,6 +103,9 @@ export default {
             medium: "2rem",
             large: "3rem",
             xlarge: "4rem",
+        },
+        height: {
+            card1: "5rem",
           },
 
         },

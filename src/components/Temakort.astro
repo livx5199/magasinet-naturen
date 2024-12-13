@@ -6,13 +6,16 @@ const { variant = "primary", size = "medium" } = Astro.props;
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper
 
 const buttonStyling =
-  "button hover:transition duration-300 pl-4 pr-4 pt-2 pb-2 rounded-rounded";
+  "button pl-4 pr-4 pt-2 pb-2 rounded-rounded font-standard text-xsmall";
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
 
 const variantClasses = {
-  primary: "bg-brown-900 hover:bg-brown-600 text-brown-50",
-  secondary: "bg-green-500 hover:bg-green-200 text-green-950",
+  fauna: "bg-purple-700 text-purple-50",
+  flora: "bg-darkgreen-800 text-darkgreen-50",
+  geologi: "bg-bordeaux-700 text-bordeaux-50",
+  magasinetnaturen: "bg-green-900 text-green-50",
+  konkurrence: "bg-redwine-700 text-redwine-50",
 };
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
