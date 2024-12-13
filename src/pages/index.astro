@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Card1 from "../components/Card-1.astro";
 import Card2 from "../components/Card-2.astro";
+import Card3 from "../components/Card-3.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import oern from "../assets/images/artikler/artikel-ørn.webp";
@@ -12,16 +13,23 @@ import oern from "../assets/images/artikler/artikel-ørn.webp";
   <section class="m-10 flex gap-5">
     <Card1
       cardimage="src/assets/images/artikler/mosaik-fjerkoelle-svamp-foto-thomas-laessoee.webp"
-      tema="Fauna"
-      temakortvariant="fauna"
+      tema="Geologi"
+      temakortvariant="geologi"
       titel="ÅKANDE-KÆRGULDSMED FUNDET PÅ FALSTER"
     />
 
     <Card2
       cardimage="src/assets/images/artikler/mosaik-fjerkoelle-svamp-foto-thomas-laessoee.webp"
-      tema="Fauna"
-      temakortvariant="fauna"
+      tema="Geologi"
+      temakortvariant="geologi"
       titel="ÅKANDE-KÆRGULDSMED FUNDET PÅ FALSTER"
+      underrubrik="I efteråret 2023 blev en ny svampeart opdaget i Danmark."
+    />
+
+    <Card3
+      cardimage="src/assets/images/shop/t-shirt-froe.webp"
+      titel="T-SHIRT - GRØNBROGET TUDSE"
+      pris="299 Kr."
     />
   </section>
 </MainLayout>

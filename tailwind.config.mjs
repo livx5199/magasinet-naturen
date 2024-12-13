@@ -81,7 +81,7 @@ export default {
         
         fontSize: {
             xsmall: ["0.7rem", { lineHeight: "0.9rem" }],
-            small: ["1rem", { lineHeight: "1.2rem" }],
+            small: ["0.8rem", { lineHeight: "1.1rem" }],
             medium: ["1.3rem", { lineHeight: "1.5rem" }],
             large: ["1.9rem", { lineHeight: "2.2rem" }],
             xlarge: ["2.488rem", { lineHeight: "2.6rem" }],
