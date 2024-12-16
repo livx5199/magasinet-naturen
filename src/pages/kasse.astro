@@ -16,7 +16,7 @@ import { Image } from "astro:assets";
 <MainLayout title="Kasse">
   <section class="lg:p-20 p-5 flex flex-col items-center kasse">
     <div
-      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 flex flex-col gap-5 fadeInUp"
+      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 flex flex-col gap-5 fade-up"
       id="din-ordre"
     >
       <Image
@@ -221,6 +221,7 @@ import { Image } from "astro:assets";
 
     const fakturering = document.getElementById("fakturering");
     fakturering.style.display = "flex";
+    fakturering.classList.add("fade-up");
 
     document
       .getElementById("tilbage-fakturering")
@@ -238,6 +239,7 @@ import { Image } from "astro:assets";
   function showOrHideStepTwoToThree() {
     const levering = document.getElementById("levering");
     levering.style.display = "flex";
+    levering.classList.add("fade-up");
 
     const fakturering = document.getElementById("fakturering");
     fakturering.style.display = "none";
@@ -252,11 +254,13 @@ import { Image } from "astro:assets";
 
       const fakturering = document.getElementById("fakturering");
       fakturering.style.display = "flex";
+      fakturering.classList.add("fade-up");
     }
   }
   function showOrHideStepThreeToFour() {
     const tak = document.getElementById("tak");
     tak.style.display = "flex";
+    tak.classList.add("fade-up");
 
     const levering = document.getElementById("levering");
     levering.style.display = "none";
