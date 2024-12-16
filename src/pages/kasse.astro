@@ -2,22 +2,25 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import kasse1 from "../assets/images/grafikker/kasse-1.svg";
+import kasse2 from "../assets/images/grafikker/kasse-2.svg";
+import kasse3 from "../assets/images/grafikker/kasse-3.svg";
 import minus from "../assets/images/grafikker/minus.svg";
 import plus from "../assets/images/grafikker/plus.svg";
-import Link from "../components/Link.astro";
+import mastercard from "../assets/images/logoer/mastercard.svg";
+import ups from "../assets/images/logoer/ups.svg";
+import visa from "../assets/images/logoer/visa.svg";
 import { Image } from "astro:assets";
-import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
 ---
 
 <MainLayout title="Kasse">
-  <section class="din-ordre p-20 flex flex-col">
+  <section class="lg:p-20 p-5 flex flex-col items-center kasse">
     <div
-      class="bg-brown-100 p-10 rounded-rounded drop-shadow h-fit w-2/3 flex flex-col"
+      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 flex flex-col gap-5 din-ordre"
     >
       <Image
         alt="Magasinet Naturen logo"
         src={kasse1}
-        class="self-center w-80"
+        class="self-center w-96"
       />
       <h3>Din ordre</h3>
       <div class="flex justify-between">
@@ -26,12 +29,12 @@ import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
           <Image
             alt="Magasinet Naturen logo"
             src={minus}
-            class="self-center w-7"
+            class="self-center w-4"
           />
           <Image
             alt="Magasinet Naturen logo"
             src={plus}
-            class="self-center w-7"
+            class="self-center w-4"
           />
           <div>
             <p>295,00 kr.</p>
@@ -43,11 +46,51 @@ import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
         <p>0,00 kr.</p>
       </div>
       <div class="flex justify-between">
-        <p class="font-display text-large">I ALT</p>
-        <p class="font-display text-large">295,00 KR.</p>
+        <p class="font-display text-medium">I ALT</p>
+        <p class="font-display text-medium">295,00 KR.</p>
       </div>
       <div class="self-center">
         <Button>TIL FAKTURERING</Button>
+      </div>
+    </div>
+
+    <div
+      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 flex flex-col gap-5 fakturering"
+    >
+      <Image
+        alt="Magasinet Naturen logo"
+        src={kasse2}
+        class="self-center w-96"
+      />
+      <h3>Fakturering</h3>
+      <div class="flex flex-col justify-between">
+        <form class="flex flex-col gap-2">
+          <div class="flex gap-2 justify-between">
+            <input type="text" placeholder="Fornavn" class="w-full" />
+            <input type="text" placeholder="Efternavn" class="w-full" />
+          </div>
+          <input
+            type="text"
+            placeholder="Firmanavn (valgfrit)"
+            class="w-full"
+          />
+          <input type="text" placeholder="Gadenavn og nummer" class="w-full" />
+          <div class="flex gap-2 justify-between">
+            <input type="text" placeholder="Postnummer" class="w-full" />
+            <input type="text" placeholder="By" class="w-full" />
+          </div>
+          <input type="text" placeholder="Telefonnummer" class="w-full" />
+          <input type="text" placeholder="E-mail adresse" class="w-full" />
+          <div class="flex gap-2">
+            <input type="checkbox" name="faktureringsadresse" />
+            <label for="faktureringsadresse">Send til faktureringsadresse</label
+            >
+          </div>
+        </form>
+      </div>
+      <div class="flex justify-between">
+        <div><Button>TILBAGE</Button></div>
+        <div><Button>TIL BETALING</Button></div>
       </div>
     </div>
   </section>

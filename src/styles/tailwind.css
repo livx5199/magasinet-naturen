@@ -30,7 +30,8 @@
 
   h4,
   p,
-  li {
+  li,
+  label {
     @apply font-standard;
   }
 
@@ -57,9 +58,23 @@
   }
 
   input:focus,
+  input:checked,
   select:focus,
   textarea:focus,
   button:focus {
     outline: none;
+  }
+
+  .kasse input {
+    @apply bg-brown-200 text-brown-950;
+  }
+
+  .kasse input::placeholder,
+  .kasse textarea::placeholder {
+    @apply text-brown-500;
+  }
+
+  .kasse input[type="checkbox"]:checked {
+    @apply bg-brown-950;
   }
 }
