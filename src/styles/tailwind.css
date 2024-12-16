@@ -78,19 +78,19 @@
     @apply bg-brown-950;
   }
 
-  .fadeInUp {
-    animation-name: fadeInUp;
+  .fade-up {
+    animation-name: fade-up;
     animation-duration: 0.5s;
     animation-iteration-count: initial;
   }
-  @keyframes fadeInUp {
+  @keyframes fade-up {
     from {
-      transform: translateY(-10px);
+      transform: translateY(5%);
       opacity: 0;
     }
 
     to {
-      transform: translateY(0px);
+      transform: translateY(0%);
       opacity: 1;
     }
   }
