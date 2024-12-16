@@ -2,12 +2,12 @@
 <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 189.15 21.38">
   <defs>
     <style>
-      .cls-1, .cls-2, .cls-3, .cls-4 {
-        fill: none;
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-miterlimit: 10;
       }
 
-      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
-        stroke-miterlimit: 10;
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-6 {
+        fill: none;
       }
 
       .cls-1, .cls-4, .cls-5 {
@@ -30,6 +30,11 @@
         fill: #cadf81;
         stroke-width: .5px;
       }
+
+      .cls-6 {
+        stroke: #cadf81;
+        stroke-width: 2px;
+      }
     </style>
   </defs>
   <g>
@@ -48,4 +53,5 @@
     <path class="cls-5" d="M151.3,7.64l5.39-1.2s1.75-2.91.9-3.89-1.84-2.56-3.16-2.26-1.24,1.55-.32,5.69c0,0-1.22-4.5-2.21-5.13s-4.84,2.54-4.54,4.34,3.94,2.45,3.94,2.45Z"/>
     <line class="cls-5" x1="156.74" y1="6.38" x2="160.57" y2="7.56"/>
   </g>
+  <polyline class="cls-6" points="181.17 15.92 183.98 18.95 188.03 12.99"/>
 </svg>

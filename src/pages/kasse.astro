@@ -4,6 +4,7 @@ import Button from "../components/Button.astro";
 import kasse1 from "../assets/images/grafikker/kasse-1.svg";
 import kasse2 from "../assets/images/grafikker/kasse-2.svg";
 import kasse3 from "../assets/images/grafikker/kasse-3.svg";
+import kasse4 from "../assets/images/grafikker/kasse-4.svg";
 import minus from "../assets/images/grafikker/minus.svg";
 import plus from "../assets/images/grafikker/plus.svg";
 import mastercard from "../assets/images/logoer/mastercard.svg";
@@ -15,7 +16,8 @@ import { Image } from "astro:assets";
 <MainLayout title="Kasse">
   <section class="lg:p-20 p-5 flex flex-col items-center kasse">
     <div
-      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 flex flex-col gap-5 din-ordre"
+      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 flex flex-col gap-5 fadeInUp"
+      id="din-ordre"
     >
       <Image
         alt="Magasinet Naturen logo"
@@ -49,13 +51,14 @@ import { Image } from "astro:assets";
         <p class="font-display text-medium">I ALT</p>
         <p class="font-display text-medium">295,00 KR.</p>
       </div>
-      <div class="self-center">
+      <div class="self-center" id="til-fakturering">
         <Button>TIL FAKTURERING</Button>
       </div>
     </div>
 
     <div
-      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 flex flex-col gap-5 fakturering"
+      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 flex-col gap-5 hidden"
+      id="fakturering"
     >
       <Image
         alt="Magasinet Naturen logo"
@@ -89,9 +92,173 @@ import { Image } from "astro:assets";
         </form>
       </div>
       <div class="flex justify-between">
-        <div><Button>TILBAGE</Button></div>
-        <div><Button>TIL BETALING</Button></div>
+        <div id="tilbage-fakturering"><Button>TILBAGE</Button></div>
+        <div id="til-levering"><Button>TIL LEVERING</Button></div>
+      </div>
+    </div>
+
+    <div
+      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 hidden flex-col gap-5"
+      id="levering"
+    >
+      <Image
+        alt="Magasinet Naturen logo"
+        src={kasse3}
+        class="self-center w-96"
+      />
+      <h3>Levering</h3>
+      <form class="flex flex-col">
+        <div class="flex justify-between">
+          <div class="flex gap-2">
+            <input type="radio" name="levering1" />
+            <label for="levering">Hjemmelevering</label>
+          </div>
+          <Image
+            alt="Magasinet Naturen logo"
+            src={ups}
+            class="self-center w-4"
+          />
+        </div>
+        <div class="flex justify-between">
+          <div class="flex gap-2">
+            <input type="radio" name="levering1" />
+            <label for="levering">Valgfri pakkeshop</label>
+          </div>
+          <Image
+            alt="Magasinet Naturen logo"
+            src={ups}
+            class="self-center w-4"
+          />
+        </div>
+      </form>
+
+      <h3 class="mt-5">Betalingsmetode</h3>
+      <form class="flex flex-col">
+        <div class="flex justify-between">
+          <div class="flex gap-2">
+            <input type="radio" name="levering1" />
+            <label for="levering">MobilePay</label>
+          </div>
+        </div>
+        <div class="flex justify-between">
+          <div class="flex gap-2">
+            <input type="radio" name="levering1" />
+            <label for="levering">Betalingskort</label>
+          </div>
+          <div class="flex gap-2">
+            <Image
+              alt="Magasinet Naturen logo"
+              src={mastercard}
+              class="self-center w-6"
+            />
+            <Image
+              alt="Magasinet Naturen logo"
+              src={visa}
+              class="self-center w-6"
+            />
+          </div>
+        </div>
+      </form>
+
+      <form class="flex flex-col">
+        <div class="flex justify-between">
+          <div class="flex gap-2">
+            <input type="checkbox" name="levering1" />
+            <label for="levering">Tilmeld mig nyhedsbrev</label>
+          </div>
+        </div>
+        <div class="flex justify-between">
+          <div class="flex gap-2">
+            <input type="checkbox" name="levering1" />
+            <label for="levering">Jeg accepterer vilkår og betingelser</label>
+          </div>
+        </div>
+      </form>
+      <div class="flex justify-between">
+        <div id="tilbage-levering"><Button>TILBAGE</Button></div>
+        <div id="til-betaling"><Button>TIL BETALING</Button></div>
+      </div>
+    </div>
+
+    <div
+      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 hidden flex-col gap-5"
+      id="tak"
+    >
+      <Image
+        alt="Magasinet Naturen logo"
+        src={kasse4}
+        class="self-center w-96"
+      />
+      <h3>Tak for din bestilling!</h3>
+      <p>
+        En ordrebekræftelse vil blive sendt til din e-mail. For spørgsmål skriv
+        til os på
+      </p>
+
+      <div class="flex self-center">
+        <div><Button>TILBAGE TIL FORSIDEN</Button></div>
       </div>
     </div>
   </section>
 </MainLayout>
+
+<script>
+  document
+    .getElementById("til-fakturering")
+    .addEventListener("click", showOrHideStepOneToTwo);
+
+  document
+    .getElementById("til-levering")
+    .addEventListener("click", showOrHideStepTwoToThree);
+
+  document
+    .getElementById("til-betaling")
+    .addEventListener("click", showOrHideStepThreeToFour);
+
+  function showOrHideStepOneToTwo() {
+    const dinordre = document.getElementById("din-ordre");
+    dinordre.style.display = "none";
+
+    const fakturering = document.getElementById("fakturering");
+    fakturering.style.display = "flex";
+
+    document
+      .getElementById("tilbage-fakturering")
+      .addEventListener("click", backToKasse);
+
+    function backToKasse() {
+      const dinordre = document.getElementById("din-ordre");
+      dinordre.style.display = "flex";
+
+      const fakturering = document.getElementById("fakturering");
+      fakturering.style.display = "none";
+    }
+  }
+
+  function showOrHideStepTwoToThree() {
+    const levering = document.getElementById("levering");
+    levering.style.display = "flex";
+
+    const fakturering = document.getElementById("fakturering");
+    fakturering.style.display = "none";
+
+    document
+      .getElementById("tilbage-levering")
+      .addEventListener("click", backToFakturering);
+
+    function backToFakturering() {
+      const levering = document.getElementById("levering");
+      levering.style.display = "none";
+
+      const fakturering = document.getElementById("fakturering");
+      fakturering.style.display = "flex";
+    }
+  }
+  function showOrHideStepThreeToFour() {
+    const tak = document.getElementById("tak");
+    tak.style.display = "flex";
+
+    const levering = document.getElementById("levering");
+    levering.style.display = "none";
+  }
+</script>

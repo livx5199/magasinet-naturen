@@ -77,4 +77,21 @@
   .kasse input[type="checkbox"]:checked {
     @apply bg-brown-950;
   }
+
+  .fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-iteration-count: initial;
+  }
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
 }
