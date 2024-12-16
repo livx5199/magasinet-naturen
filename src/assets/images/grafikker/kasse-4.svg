@@ -6,17 +6,16 @@
         stroke-miterlimit: 10;
       }
 
+      .cls-1, .cls-2, .cls-4 {
+        stroke: #231f20;
+      }
+
       .cls-1, .cls-3, .cls-4 {
         fill: none;
       }
 
-      .cls-1, .cls-4 {
-        stroke: #939598;
-      }
-
       .cls-2 {
         fill: #cadf81;
-        stroke: #231f20;
         stroke-width: .5px;
       }
 
