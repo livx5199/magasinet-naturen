@@ -1,0 +1,54 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import kasse1 from "../assets/images/grafikker/kasse-1.svg";
+import minus from "../assets/images/grafikker/minus.svg";
+import plus from "../assets/images/grafikker/plus.svg";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
+---
+
+<MainLayout title="Kasse">
+  <section class="din-ordre p-20 flex flex-col">
+    <div
+      class="bg-brown-100 p-10 rounded-rounded drop-shadow h-fit w-2/3 flex flex-col"
+    >
+      <Image
+        alt="Magasinet Naturen logo"
+        src={kasse1}
+        class="self-center w-80"
+      />
+      <h3>Din ordre</h3>
+      <div class="flex justify-between">
+        <p>Magasinet Naturen abonnement, 1 år x 1</p>
+        <div class="flex gap-2">
+          <Image
+            alt="Magasinet Naturen logo"
+            src={minus}
+            class="self-center w-7"
+          />
+          <Image
+            alt="Magasinet Naturen logo"
+            src={plus}
+            class="self-center w-7"
+          />
+          <div>
+            <p>295,00 kr.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <p>Levering</p>
+        <p>0,00 kr.</p>
+      </div>
+      <div class="flex justify-between">
+        <p class="font-display text-large">I ALT</p>
+        <p class="font-display text-large">295,00 KR.</p>
+      </div>
+      <div class="self-center">
+        <Button>TIL FAKTURERING</Button>
+      </div>
+    </div>
+  </section>
+</MainLayout>
