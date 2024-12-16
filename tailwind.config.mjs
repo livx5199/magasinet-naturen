@@ -83,8 +83,8 @@ export default {
             xsmall: ["0.7rem", { lineHeight: "0.9rem" }],
             small: ["0.8rem", { lineHeight: "1.1rem" }],
             medium: ["1.3rem", { lineHeight: "1.5rem" }],
-            large: ["1.9rem", { lineHeight: "2.2rem" }],
-            xlarge: ["2.488rem", { lineHeight: "2.6rem" }],
+            large: ["1.6rem", { lineHeight: "1.9rem" }],
+            xlarge: ["2.2rem", { lineHeight: "2.6rem" }],
             xxlarge: ["2.986rem", { lineHeight: "3rem" }],
         },
         

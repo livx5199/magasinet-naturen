@@ -1,0 +1,74 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import btlogo from "../assets/images/logoer/btlogo.webp";
+import bnlogo from "../assets/images/logoer/bnlogo.webp";
+import Card3 from "../components/Card-3.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
+---
+
+<MainLayout title="Titel">
+  <section
+    class="flex flex-col lg:flex-row p-20 lg:ml-10 lg:mr-10 lg:justify-between gap-5 items-center"
+  >
+    <div class="flex flex-col gap-2 lg:w-3/6">
+      <h1>Magasinet Naturen</h1>
+      <h3>Indsigt og viden om danmarks vilde natur</h3>
+      <p class="pt-2 pb-2">
+        Magasinet Naturen er et naturfagligt magasin dedikeret til at udforske
+        og formidle den seneste forskning inden for dansk naturs flora og fauna,
+        geologi og økologi. <br /><br />Danmark er et land med en rig og
+        varieret vild natur. Vi er omgivet af hav, strande, skove, enge og
+        heder. Her lever et væld af arter, både planter og dyr. Men Danmarks
+        vilde natur er under pres fra klimaforandringer, overudnyttelse og andre
+        trusler. Nye arter tager over med naturændringernes indtog, og andre
+        forsvinder. <br /><br />Magasinet Naturen byder på kompleks viden om
+        Danmarks vilde natur. Formidlet på en engagerende måde med flotte
+        billeder og illustrationer, for at skabe en lærerig og fordybende
+        oplevelse for både naturelskere og eksperter. Indholdet i Magasinet
+        Naturen skrives af landets førende naturskribenter, som vil præsentere
+        dig for den nyeste forskning på området. <br /><br />Vi dækker hele
+        Danmark, og trækker desuden på kompetente lokalredaktører i Jylland og
+        på øerne. Du finder ikke lignende magasiner i Danmark, der har direkte
+        fokus på Danmarks vilde natur!
+      </p>
+      <h4>
+        Vil du være en del af initiativet? Bliv sponsor og vær med til at fremme
+        vores budskab!
+      </h4>
+    </div>
+    <div
+      class="flex flex-col p-5 lg:p-10 lg:w-2/6 bg-brown-300 gap-5 rounded-rounded drop-shadow"
+    >
+      <h3>Læs om os i medierne</h3>
+      <div class="p-5 bg-brown-100 rounded-rounded drop-shadow">
+        <Image alt="Magasinet Naturen logo" src={btlogo} class="w-36" />
+        <p class="pt-2">Lokale kræfter lancerer nyt naturmagasin</p>
+      </div>
+      <div class="p-5 bg-brown-100 rounded-rounded drop-shadow">
+        <Image alt="Magasinet Naturen logo" src={bnlogo} class="w-36" />
+        <p class="pt-2">
+          Bornholmsk forlag udgiver nyt landsdækkende naturmagasin
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex flex-col p-20 bg-green-500 items-center gap-5 mb-10">
+    <div class="text-center lg:w-3/5">
+      <h2>
+        Magasinet Naturen kan købes både som abonnement og i løssalg her på
+        hjemmesiden.
+      </h2>
+      <h4 class="pt-3">
+        Derudover kan det købes gennem landets boghandlere. Snart vil det også
+        komme til salg på udvalgte museer og naturbutikker.
+      </h4>
+    </div>
+    <div>
+      <Button>BLIV ABONNENT</Button>
+    </div>
+  </section>
+</MainLayout>
