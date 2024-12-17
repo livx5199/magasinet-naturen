@@ -14,9 +14,11 @@ import { Image } from "astro:assets";
 ---
 
 <MainLayout title="Kasse">
-  <section class="lg:p-20 p-5 flex flex-col items-center kasse">
+  <section
+    class="section-mobile lg:section-desktop flex flex-col items-center kasse"
+  >
     <div
-      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 flex flex-col gap-5 fade-up"
+      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 flex flex-col gap-small fade-up"
       id="din-ordre"
     >
       <Image
@@ -27,7 +29,7 @@ import { Image } from "astro:assets";
       <h3>Din ordre</h3>
       <div class="flex justify-between">
         <p>Magasinet Naturen abonnement, 1 år x 1</p>
-        <div class="flex gap-2">
+        <div class="flex gap-small">
           <Image
             alt="Magasinet Naturen logo"
             src={minus}
@@ -57,7 +59,7 @@ import { Image } from "astro:assets";
     </div>
 
     <div
-      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 flex-col gap-5 hidden"
+      class="bg-brown-100 section-mobile lg:section-desktop rounded-rounded drop-shadow h-fit md:w-2/3 flex-col gap-small hidden"
       id="fakturering"
     >
       <Image
@@ -67,8 +69,8 @@ import { Image } from "astro:assets";
       />
       <h3>Fakturering</h3>
       <div class="flex flex-col justify-between">
-        <form class="flex flex-col gap-2">
-          <div class="flex gap-2 justify-between">
+        <form class="flex flex-col gap-small">
+          <div class="flex gap-small justify-between">
             <input type="text" placeholder="Fornavn" class="w-full" />
             <input type="text" placeholder="Efternavn" class="w-full" />
           </div>
@@ -78,13 +80,13 @@ import { Image } from "astro:assets";
             class="w-full"
           />
           <input type="text" placeholder="Gadenavn og nummer" class="w-full" />
-          <div class="flex gap-2 justify-between">
+          <div class="flex gap-small justify-between">
             <input type="text" placeholder="Postnummer" class="w-full" />
             <input type="text" placeholder="By" class="w-full" />
           </div>
           <input type="text" placeholder="Telefonnummer" class="w-full" />
           <input type="text" placeholder="E-mail adresse" class="w-full" />
-          <div class="flex gap-2">
+          <div class="flex gap-small">
             <input type="checkbox" name="faktureringsadresse" />
             <label for="faktureringsadresse">Send til faktureringsadresse</label
             >
@@ -98,7 +100,7 @@ import { Image } from "astro:assets";
     </div>
 
     <div
-      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 hidden flex-col gap-5"
+      class="bg-brown-100 section-mobile lg:section-desktop rounded-rounded drop-shadow h-fit md:w-2/3 hidden flex-col gap-small"
       id="levering"
     >
       <Image
@@ -109,7 +111,7 @@ import { Image } from "astro:assets";
       <h3>Levering</h3>
       <form class="flex flex-col">
         <div class="flex justify-between">
-          <div class="flex gap-2">
+          <div class="flex gap-small">
             <input type="radio" name="levering1" />
             <label for="levering">Hjemmelevering</label>
           </div>
@@ -120,7 +122,7 @@ import { Image } from "astro:assets";
           />
         </div>
         <div class="flex justify-between">
-          <div class="flex gap-2">
+          <div class="flex gap-small">
             <input type="radio" name="levering1" />
             <label for="levering">Valgfri pakkeshop</label>
           </div>
@@ -135,17 +137,17 @@ import { Image } from "astro:assets";
       <h3 class="mt-5">Betalingsmetode</h3>
       <form class="flex flex-col">
         <div class="flex justify-between">
-          <div class="flex gap-2">
+          <div class="flex gap-small">
             <input type="radio" name="levering1" />
             <label for="levering">MobilePay</label>
           </div>
         </div>
         <div class="flex justify-between">
-          <div class="flex gap-2">
+          <div class="flex gap-small">
             <input type="radio" name="levering1" />
             <label for="levering">Betalingskort</label>
           </div>
-          <div class="flex gap-2">
+          <div class="flex gap-small">
             <Image
               alt="Magasinet Naturen logo"
               src={mastercard}
@@ -162,13 +164,13 @@ import { Image } from "astro:assets";
 
       <form class="flex flex-col">
         <div class="flex justify-between">
-          <div class="flex gap-2">
+          <div class="flex gap-small">
             <input type="checkbox" name="levering1" />
             <label for="levering">Tilmeld mig nyhedsbrev</label>
           </div>
         </div>
         <div class="flex justify-between">
-          <div class="flex gap-2">
+          <div class="flex gap-small">
             <input type="checkbox" name="levering1" />
             <label for="levering">Jeg accepterer vilkår og betingelser</label>
           </div>
@@ -181,7 +183,7 @@ import { Image } from "astro:assets";
     </div>
 
     <div
-      class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 hidden flex-col gap-5"
+      class="bg-brown-100 section-mobile lg:section-desktop rounded-rounded drop-shadow h-fit md:w-2/3 hidden flex-col gap-small"
       id="tak"
     >
       <Image

@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import Temakort from "./Temakort.astro";
+import Tilbudsskilt from "./Tilbudsskilt.astro";
 import Button from "./Button.astro";
 
 const {
@@ -9,11 +9,13 @@ const {
 
   titel = "",
   pris = "",
+  tilbud = "",
+  variant = "",
 } = Astro.props;
 ---
 
 <article
-  class="grid grid-rows-5 grid-cols-2 rounded-rounded w-64 h-fit shadow-drop25"
+  class="grid grid-rows-5 grid-cols-2 rounded-rounded w-64 h-fit shadow-drop25 container"
 >
   <img
     src={cardimage}
@@ -21,9 +23,15 @@ const {
     class="row-start-1 col-start-1 row-span-3 col-span-2 object-cover w-full h-full rounded-t-rounded"
   />
   <div
+    class="row-start-3 col-start-1 row-span-1 col-span-2 self-end justify-self-end m-2"
+  >
+    <Tilbudsskilt variant={variant}>{tilbud}</Tilbudsskilt>
+  </div>
+
+  <div
     class="flex flex-col justify-between bg-brown-50 row-start-4 row-span-2 col-start-1 col-span-2 p-3 rounded-b-rounded"
   >
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-small">
       <h3 class="self-center text-medium">
         {titel}
       </h3>

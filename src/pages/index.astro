@@ -6,30 +6,32 @@ import Card2 from "../components/Card-2.astro";
 import Card3 from "../components/Card-3.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
+import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
 ---
 
 <MainLayout title="Titel">
-  <section class="m-10 flex flex-col gap-10 items-center">
+  <section
+    class="section-mobile lg:section-desktop flex flex-col gap-medium items-center"
+  >
     <h1>NYESTE HISTORIER</h1>
     <div>
-      <div class="flex flex-col lg:flex-row gap-10">
+      <div class="flex flex-col lg:flex-row gap-large">
         <Card1
-          cardimage='/artikler/stor-kaerguldsmed-magasinet-naturen.webp"'
+          cardimage="/images/artikler/stor-kaerguldsmed-magasinet-naturen.webp"
           tema="Fauna"
           temakortvariant="fauna"
           titel="ÅKANDE-KÆRGULDSMED FUNDET PÅ FALSTER"
         />
 
         <Card1
-          cardimage="/artikler/mosaik-fjerkoelle-svamp-foto-thomas-laessoee.webp"
+          cardimage="/images/artikler/mosaik-fjerkoelle-svamp-foto-thomas-laessoee.webp"
           tema="Geologi"
           temakortvariant="geologi"
           titel="MOSAIK-FJERKØLLE FUNDET I VEJLE ÅDAL"
         />
 
         <Card1
-          cardimage="/artikler/konkurrence.webp"
+          cardimage="/images/artikler/konkurrence.webp"
           tema="Konkurrence"
           temakortvariant="konkurrence"
           titel="FOTOKONKURRENCE: DEL DIT BEDSTE NATURØJEBLIK"
@@ -39,14 +41,14 @@ import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
   </section>
 
   <section
-    class="sektion-2 flex flex-col items-center lg:grid lg:grid-cols-4 lg:grid-rows-4 gap-5"
+    class="sektion-2 flex flex-col items-center lg:grid lg:grid-cols-4 lg:grid-rows-4 gap-small"
   >
     <div
-      class="sektion-2-div lg:col-start-1 lg:col-span-4 lg:row-start-2 lg:row-span-2 bg-green-500"
+      class="lg:col-start-1 lg:col-span-4 lg:row-start-2 lg:row-span-2 bg-green-500 h-full"
     >
     </div>
     <div
-      class="flex flex-col gap-2 col-start-1 col-span-2 row-start-2 row-span-2 m-10 lg:pl-10"
+      class="flex flex-col gap-small col-start-1 col-span-2 row-start-2 row-span-2 section-mobile lg:section-desktop"
     >
       <h2 class="uppercase">Velkommen til magasinet naturen</h2>
       <h4>Nyt magasin med indsigt og viden om Danmarks vilde natur</h4>
@@ -57,7 +59,7 @@ import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
         naturskribenter, og udkommer fysisk hvert halve år.
       </p>
       <div class="self-center lg:self-start">
-        <Button>Læs mere om os</Button>
+        <Button><a href="/om-os">LÆS MERE OM OS</a></Button>
       </div>
     </div>
     <Image
@@ -67,13 +69,13 @@ import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
     />
   </section>
 
-  <section class="flex flex-col gap-5 p-20 lg:ml-10 lg:mr-10">
+  <section class="flex flex-col gap-medium section-mobile lg:section-desktop">
     <div class="text-center lg:text-left">
       <h2>Læs også</h2>
       <h3>Fulde artikler kun for abonnenter</h3>
     </div>
     <div
-      class="flex flex-col lg:flex-row lg:justify-between gap-5 items-center"
+      class="flex flex-col lg:flex-row lg:justify-between gap-medium items-center"
     >
       <Card2
         cardimage="/images/artikler/suppeskildpadde-1024x576.webp"
@@ -106,7 +108,9 @@ import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
     </div>
   </section>
 
-  <section class="flex flex-col p-20 bg-green-500 items-center gap-5">
+  <section
+    class="flex flex-col section-mobile lg:section-desktop bg-green-500 items-center gap-medium"
+  >
     <div class="text-center lg:w-3/5">
       <h1>Skal du have det hele med?</h1>
       <h3 class="pt-3">
@@ -119,12 +123,14 @@ import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
     </div>
   </section>
 
-  <section class="flex flex-col p-20 gap-5">
+  <section class="flex flex-col p-20 gap-medium">
     <div>
       <h2>Nyheder i shoppen</h2>
       <h3>Støt vores arbejde med flotte ting til hjemmet og til hjernen.</h3>
     </div>
-    <div class="flex flex-col lg:flex-row gap-5 justify-between items-center">
+    <div
+      class="flex flex-col lg:flex-row gap-medium justify-between items-center"
+    >
       <Card3
         cardimage="/images/shop/plakat.webp"
         titel="Magasinet Naturen plakat"

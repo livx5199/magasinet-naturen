@@ -104,6 +104,9 @@ export default {
             "section-horizontal": "5rem",
             "m-section-vertical": "1rem",
             "m-section-horizontal": "2.5rem",
+            "small": "1rem",
+            "medium": "3rem",
+            "large": "6rem",
         },
 
         },},

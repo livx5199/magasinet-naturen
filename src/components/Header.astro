@@ -14,16 +14,18 @@ import lup from "../assets/images/grafikker/lup.svg";
     ><Image alt="Magasinet Naturen logo" src={logo} class="w-24" /></a
   >
   <ul class="flex text-brown-50 gap-4 pl-14">
-    <li class="list-none navtext">FORSIDE</li>
+    <li class="list-none navtext"><a href="/">FORSIDE</a></li>
     <li class="list-none navtext">ARTIKLER</li>
     <li class="list-none navtext"><a href="/om-os">OM OS</a></li>
-    <li class="list-none navtext">SHOP</li>
+    <li class="list-none navtext"><a href="/shop">SHOP</a></li>
   </ul>
-  <div class="flex gap-5">
+  <div class="flex gap-medium">
     <Button variant="secondary">ABONNÉR</Button>
-    <div class="flex gap-5 items-center">
+    <div class="flex gap-small items-center">
       <Image alt="Magasinet Naturen logo" src={lup} class="w-3" />
-      <Image alt="Magasinet Naturen logo" src={kurv} class="w-3" />
+      <a href="/kasse"
+        ><Image alt="Magasinet Naturen logo" src={kurv} class="w-3" /></a
+      >
     </div>
   </div>
 </section>
@@ -36,7 +38,7 @@ import lup from "../assets/images/grafikker/lup.svg";
     >
 
     <Button />
-    <div class="flex gap-5 items-center">
+    <div class="flex gap-medium items-center">
       <Image alt="Magasinet Naturen logo" src={lup} class="w-3" />
       <Image alt="Magasinet Naturen logo" src={kurv} class="w-3" />
     </div>

@@ -16,8 +16,8 @@ import { Image } from "astro:assets";
 ---
 
 <MainLayout title="Shop">
-  <section class="flex flex-col gap-5">
-    <div class="flex flex-col gap-2 section-mobile lg:section-desktop">
+  <section class="flex flex-col gap-medium">
+    <div class="flex flex-col gap-small section-mobile lg:section-desktop">
       <h1>Shop</h1>
       <h3>
         Her kan du tegne abonnement på Magasinet Naturen, eller gå på opdagelse
@@ -34,29 +34,34 @@ import { Image } from "astro:assets";
     </div>
 
     <div
-      class="flex flex-col gap-5 section-mobile lg:section-desktop bg-brown-200"
+      class="flex flex-col gap-medium section-mobile lg:section-desktop bg-brown-200"
     >
       <h2>Abonnement på Magasinet Naturen</h2>
-      <div class="flex gap-10 flex-wrap justify-center">
+      <div class="flex gap-large flex-wrap justify-center">
         <Card3
           cardimage="/images/shop/magasinetnaturen-1.webp"
           titel="Michael Stoltze: Danske Dagsommerfugle"
           pris="450 Kr."
+          tilbud=""
+          variant="secondary"
         />
         <Card3
           cardimage="/images/shop/magasinetnaturen-2magasiner.webp"
           titel="Michael Stoltze: Danske Dagsommerfugle"
           pris="450 Kr."
+          tilbud=""
         />
         <Card3
           cardimage="/images/shop/magasinetnaturen-5magasiner.webp"
           titel="Michael Stoltze: Danske Dagsommerfugle"
           pris="450 Kr."
+          tilbud="5 for 4 abonnementers pris"
+          variant="primary"
         />
       </div>
     </div>
 
-    <div class="flex flex-col gap-5 section-mobile lg:section-desktop">
+    <div class="flex flex-col gap-medium section-mobile lg:section-desktop">
       <div class="flex flex-col">
         <h2>Andre produkter</h2>
         <h3>
@@ -64,9 +69,9 @@ import { Image } from "astro:assets";
           bogreolen
         </h3>
       </div>
-      <div class="flex gap-10 flex-wrap justify-center">
+      <div class="flex gap-large flex-wrap justify-center">
         <div
-          class="flex flex-col rounded-rounded p-10 bg-brown-200 drop-shadow gap-5"
+          class="flex flex-col rounded-rounded p-10 bg-brown-200 drop-shadow gap-medium"
         >
           <div class="flex flex-col">
             <h3>Søg</h3>
@@ -82,7 +87,7 @@ import { Image } from "astro:assets";
                 /></button
               >
             </div>
-          </div><div class="flex flex-col gap-2">
+          </div><div class="flex flex-col gap-small">
             <h3>Sortér</h3>
             <div class="flex flex-col">
               <label for="produkter">Produktkategori</label>
@@ -133,3 +138,20 @@ import { Image } from "astro:assets";
     </div>
   </section>
 </MainLayout>
+
+<!-- <script>
+  var container = document.querySelectorAll("container");
+
+  container.forEach((element) => {
+    const tilbudscontainer = element.getElementById("tilbudscontainer");
+    const tilbudstekst = element.getElementById("tilbudstekst");
+
+    if (tilbudstekst.textContent.trim() === "") {
+      console.log("The element is empty.");
+      tilbudscontainer.style.display = "none";
+    } else {
+      console.log("The element is not empty.");
+      tilbudscontainer.style.display = "block";
+    }
+  });
+</script> -->
