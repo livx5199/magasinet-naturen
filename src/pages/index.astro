@@ -6,18 +6,18 @@ import Card2 from "../components/Card-2.astro";
 import Card3 from "../components/Card-3.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
+import magasiner from "/public/images/shop/magasiner-2.webp";
 ---
 
 <MainLayout title="Magasinet Naturen">
   <section
-    class="section-mobile lg:section-desktop flex flex-col gap-7 justify-center"
+    class="section-mobile lg:section-desktop flex flex-col gap-7 justify-center pt-medium"
   >
-    <div class="flex justify-between w-5/6 self-center">
+    <div class="flex self-center">
       <h1 class="">NYESTE HISTORIER</h1>
     </div>
 
-    <div class="flex flex-col lg:flex-row gap-large self-center">
+    <div class="flex flex-wrap gap-medium self-center">
       <Card1
         cardimage="/images/artikler/stor-kaerguldsmed-magasinet-naturen.webp"
         tema="Fauna"
@@ -49,7 +49,7 @@ import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
     >
     </div>
     <div
-      class="flex flex-col gap-small col-start-1 col-span-2 row-start-2 row-span-2 section-mobile lg:section-desktop"
+      class="flex flex-col gap-small col-start-1 col-span-3 row-start-2 row-span-2 section-mobile lg:section-desktop pt-medium"
     >
       <h2 class="uppercase">Velkommen til magasinet naturen</h2>
       <h4>Nyt magasin med indsigt og viden om Danmarks vilde natur</h4>
@@ -66,18 +66,16 @@ import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
     <Image
       alt="Magasinet Naturen to magasiner"
       src={magasiner}
-      class="w-4/5 justify-self-end self-center col-start-3 col-span-2 row-start-1 row-span-4"
+      class="w-4/5 justify-self-end self-center col-start-3 col-span-2 row-start-1 row-span-4 lg:pr-large"
     />
   </section>
 
-  <section class="flex flex-col gap-medium section-mobile lg:section-desktop">
+  <section class="flex flex-col gap-small section-mobile lg:section-desktop">
     <div class="text-center lg:text-left">
       <h2>Læs også</h2>
       <h3>Fulde artikler kun for abonnenter</h3>
     </div>
-    <div
-      class="flex flex-col lg:flex-row lg:justify-between gap-medium items-center"
-    >
+    <div class="flex flex-wrap lg:justify-between gap-medium items-center">
       <Card2
         cardimage="/images/artikler/suppeskildpadde-1024x576.webp"
         tema="Fauna"
@@ -110,7 +108,7 @@ import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
   </section>
 
   <section
-    class="flex flex-col section-mobile lg:section-desktop bg-green-500 items-center gap-medium fade mt-large"
+    class="flex flex-col section-mobile lg:section-desktop bg-green-500 items-center gap-medium fade pt-large"
   >
     <div class="text-center lg:w-3/5">
       <h1>Skal du have det hele med?</h1>
@@ -124,14 +122,14 @@ import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
     </div>
   </section>
 
-  <section class="flex flex-col p-20 gap-medium">
+  <section
+    class="flex flex-col p-20 gap-medium section-mobile lg:section-desktop"
+  >
     <div>
       <h2>Nyheder i shoppen</h2>
       <h3>Støt vores arbejde med flotte ting til hjemmet og til hjernen.</h3>
     </div>
-    <div
-      class="flex flex-col lg:flex-row gap-medium justify-between items-center"
-    >
+    <div class="flex flex-wrap gap-small justify-between items-center">
       <Card3
         cardimage="/images/shop/plakat.webp"
         titel="Magasinet Naturen plakat"

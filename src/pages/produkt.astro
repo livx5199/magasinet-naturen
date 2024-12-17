@@ -1,0 +1,101 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
+import magasiner2 from "/public/images/shop/single-view2.webp";
+import magasiner3 from "/public/images/shop/single-view-3.webp";
+import magasiner4 from "/public/images/shop/single-view-4.webp";
+import bnlogo from "../assets/images/logoer/bnlogo.webp";
+import Card3 from "../components/Card-3.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+---
+
+<MainLayout title="Produkt">
+  <section
+    class="flex flex-col lg:flex-row section-mobile lg:section-desktop gap-medium pt-medium"
+  >
+    <div class="grid grid-cols-3 grid-rows-4 lg:w-2/5">
+      <Image
+        alt="Billede af to udgaver af Magasinet Naturen"
+        src={magasiner}
+        class="w-full col-span-3 row-span-3"
+      />
+      <Image
+        alt="Billede af en artikel i Magasinet Naturen"
+        src={magasiner2}
+        class="w-full col-start-1 col-span-1 row-start-4 row-span-1"
+      />
+      <Image
+        alt="Billede af en artikel i Magasinet Naturen"
+        src={magasiner3}
+        class="w-full col-start-2 col-span-1 row-start-4 row-span-1"
+      />
+      <Image
+        alt="Billede af en artikel i Magasinet Naturen"
+        src={magasiner4}
+        class="w-full col-start-3 col-span-1 row-start-4 row-span-1"
+      />
+    </div>
+    <div class="flex flex-col lg:w-3/5">
+      <div class="flex flex-col gap-medium">
+        <div class="flex flex-col gap-small">
+          <h2>Magasinet Naturen abonnement, 1 år (2 udgivelser)</h2>
+          <p class="text-small">
+            Indholdet i Magasinet Naturen skrives af landets førende
+            naturskribenter. I første udgivelse kan du blandt andet læse om: <br
+            /><br />
+            • Hvaler i havet omkring Danmark <br />• Fund af en sjælden art af
+            kærguldsmede på Falster <br />• Ny svamp i Danmark: Mosaik-fjerkølle
+            fundet i Vejle Ådal <br />• En bornholmsk ørnehistorie <br /><br /> ..
+            og meget, meget mere!
+          </p>
+          <ul class="text-xsmall flex flex-col gap-1">
+            <li>Omfang: 100 sider pr. udgivelse.</li>
+            <li>Farvetryk i høj kvalitet på FSC miljømærket papir.</li>
+            <li>Format: 21,0 x 28,5 cm.</li>
+            <li>
+              Det trykte magasin leveres til din postkasse. Fri levering med et
+              Magasinet Naturen abonnement.
+            </li>
+            <li>
+              Dit Magasinet Naturen abonnement bliver automatisk fornyet efter 1
+              år. Abonnementet kan til enhver tid opsiges, hvis du ikke ønsker,
+              at det skal fortsætte.
+            </li>
+          </ul>
+        </div>
+        <div
+          class="flex flex-col gap-2 p-small bg-brown-200 rounded-rounded self-end drop-shadow"
+        >
+          <div>
+            <p>
+              Magasinet Naturen. Abonnement: 1 år (2 udgivelser). Gratis
+              levering.
+            </p>
+          </div>
+          <div class="flex justify-between items-center">
+            <div class="flex flex-col">
+              <label for="antal" class="text-xsmall">Antal</label>
+              <input
+                type="number"
+                class="bg-brown-50"
+                name="antal"
+                value="1"
+                aria-label="Product quantity"
+                size="4"
+                min="1"
+                max="4"
+                step="1"
+                placeholder="Antal"
+              />
+            </div>
+            <div class="self-end">
+              <Button>LÆG I KURV</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

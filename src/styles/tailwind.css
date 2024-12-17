@@ -49,7 +49,7 @@
   /* Spacing */
 
   .section-desktop {
-    @apply pl-section-horizontal pr-section-horizontal pt-section-vertical pb-section-vertical;
+    @apply pl-section-horizontal pr-section-horizontal pb-section-vertical;
   }
 
   .section-mobile {

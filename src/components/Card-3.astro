@@ -12,6 +12,7 @@ const {
   tilbud = "",
   variant = "",
   gammelpris = "",
+  url = "",
 } = Astro.props;
 ---
 
@@ -43,7 +44,7 @@ const {
         <h4 class="text-small">{pris}</h4>
       </div>
     </div><div class="self-end">
-      <Button variant="primary">SE VARE</Button>
+      <Button variant="primary"><a href={url}>SE VARE</a></Button>
     </div>
   </div>
 </article>

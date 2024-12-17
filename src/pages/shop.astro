@@ -1,16 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
 import lup from "../assets/images/grafikker/lup.svg";
-import magasinetnaturen1 from "../assets/images/shop/magasinetnaturen-1.webp";
-import magasinetnaturen2 from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
-import magasinetnaturen3 from "../assets/images/shop/magasinetnaturen-5magasiner.webp";
-import bognoctuidae from "../assets/images/shop/noctuidae-europaeae-essential-bog-shop.webp";
-import plakat from "../assets/images/shop/plakat.webp";
-import tshirtfroe from "../assets/images/shop/t-shirt-froe.webp";
-import tshirtloevetand from "../assets/images/shop/t-shirt-loevetandspinder.webp";
-import tshirtsildehaj from "../assets/images/shop/t-shirt-sildehaj.webp";
-import tshirtstenvender from "../assets/images/shop/t-shirt-stenvender.webp";
 import Card3 from "../components/Card-3.astro";
 import { Image } from "astro:assets";
 ---
@@ -34,10 +24,10 @@ import { Image } from "astro:assets";
     </div>
 
     <div
-      class="flex flex-col gap-medium section-mobile lg:section-desktop bg-brown-200"
+      class="flex flex-col gap-medium section-mobile lg:section-desktop bg-green-500"
     >
-      <h2>Abonnement på Magasinet Naturen</h2>
-      <div class="flex gap-large flex-wrap justify-center">
+      <h2 class="self-center text-center">Abonnement på Magasinet Naturen</h2>
+      <div class="flex flex-wrap justify-around">
         <Card3
           cardimage="/images/shop/magasinetnaturen-1.webp"
           titel="Magasinet Naturen nr. 1"
@@ -46,10 +36,11 @@ import { Image } from "astro:assets";
           variant="secondary"
         />
         <Card3
-          cardimage="/images/shop/magasinetnaturen-2magasiner.webp"
+          cardimage="/images/shop/magasiner-2.webp"
           titel="Magasinet Naturen abonnement, 1 år (2 udgivelser)"
           pris="295,00 kr. / år"
           tilbud=""
+          url="/produkt"
         />
         <Card3
           cardimage="/images/shop/magasinetnaturen-5magasiner.webp"
@@ -69,7 +60,7 @@ import { Image } from "astro:assets";
           bogreolen
         </h3>
       </div>
-      <div class="flex gap-medium flex-wrap justify-center">
+      <div class="flex flex-wrap justify-between gap-small">
         <div
           class="flex flex-col rounded-rounded p-7 w-64 bg-brown-200 drop-shadow gap-medium"
         >

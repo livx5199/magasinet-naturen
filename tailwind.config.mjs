@@ -100,8 +100,8 @@ export default {
     extend: {
             
         spacing: {
-            "section-vertical": "2rem",
-            "section-horizontal": "5rem",
+            "section-vertical": "4rem",
+            "section-horizontal": "10rem",
             "m-section-vertical": "1rem",
             "m-section-horizontal": "2.5rem",
             "small": "1rem",
