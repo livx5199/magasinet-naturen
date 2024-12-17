@@ -15,7 +15,7 @@ import { Image } from "astro:assets";
 
 <MainLayout title="Kasse">
   <section
-    class="section-mobile lg:section-desktop flex flex-col items-center kasse"
+    class="section-mobile lg:section-desktop pt-medium flex flex-col items-center kasse"
   >
     <div
       class="bg-brown-100 p-5 lg:p-10 rounded-rounded drop-shadow h-fit md:w-2/3 flex flex-col gap-small fade-up"
@@ -59,7 +59,7 @@ import { Image } from "astro:assets";
     </div>
 
     <div
-      class="bg-brown-100 section-mobile lg:section-desktop rounded-rounded drop-shadow h-fit md:w-2/3 flex-col gap-small hidden"
+      class="bg-brown-100 section-mobile lg:section-desktop pt-medium rounded-rounded drop-shadow h-fit md:w-2/3 flex-col gap-small hidden"
       id="fakturering"
     >
       <Image
@@ -100,7 +100,7 @@ import { Image } from "astro:assets";
     </div>
 
     <div
-      class="bg-brown-100 section-mobile lg:section-desktop rounded-rounded drop-shadow h-fit md:w-2/3 hidden flex-col gap-small"
+      class="bg-brown-100 section-mobile pt-medium lg:section-desktop rounded-rounded drop-shadow h-fit md:w-2/3 hidden flex-col gap-small"
       id="levering"
     >
       <Image
@@ -183,7 +183,7 @@ import { Image } from "astro:assets";
     </div>
 
     <div
-      class="bg-brown-100 section-mobile lg:section-desktop rounded-rounded drop-shadow h-fit md:w-2/3 hidden flex-col gap-small"
+      class="bg-brown-100 pt-medium section-mobile lg:section-desktop rounded-rounded drop-shadow h-fit md:w-2/3 hidden flex-col gap-small"
       id="tak"
     >
       <Image
@@ -198,7 +198,7 @@ import { Image } from "astro:assets";
       </p>
 
       <div class="flex self-center">
-        <div><Button><a href="index">TILBAGE TIL FORSIDEN</a></Button></div>
+        <div><Button><a href="/">TILBAGE TIL FORSIDEN</a></Button></div>
       </div>
     </div>
   </section>
