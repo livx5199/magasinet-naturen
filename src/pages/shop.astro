@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import bogsommerfugle from "../assets/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp";
+import lup from "../assets/images/grafikker/lup.svg";
 import magasinetnaturen1 from "../assets/images/shop/magasinetnaturen-1.webp";
 import magasinetnaturen2 from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
 import magasinetnaturen3 from "../assets/images/shop/magasinetnaturen-5magasiner.webp";
@@ -34,8 +34,8 @@ import { Image } from "astro:assets";
     </div>
 
     <div class="flex flex-col gap-5 p-20 bg-brown-200">
-      <h3>Abonnement på Magasinet Naturen</h3>
-      <div class="flex justify-between">
+      <h2>Abonnement på Magasinet Naturen</h2>
+      <div class="flex gap-10 flex-wrap">
         <Card3
           cardimage="/images/shop/magasinetnaturen-1.webp"
           titel="Michael Stoltze: Danske Dagsommerfugle"
@@ -48,6 +48,62 @@ import { Image } from "astro:assets";
         />
         <Card3
           cardimage="/images/shop/magasinetnaturen-5magasiner.webp"
+          titel="Michael Stoltze: Danske Dagsommerfugle"
+          pris="450 Kr."
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-5 p-20">
+      <div class="flex flex-col">
+        <h2>Andre produkter</h2>
+        <h3>
+          Støt vores arbejde med flotte tillæg til væggen, garderoben eller
+          bogreolen
+        </h3>
+      </div>
+      <div class="flex gap-10 flex-wrap">
+        <div
+          class="flex flex-col rounded-rounded p-10 bg-brown-200 drop-shadow"
+        >
+          <div class="flex flex-col">
+            <h3>Søg</h3>
+            <div class="flex">
+              <input
+                type="text"
+                class="bg-brown-50 rounded-l-rounded rounded-r-none"
+              /><button class="bg-brown-50 p-2 rounded-r-rounded"
+                ><Image
+                  alt="Magasinet Naturen logo"
+                  src={lup}
+                  class="w-4 fill-brown-800"
+                /></button
+              >
+            </div>
+          </div>
+        </div>
+        <Card3
+          cardimage="/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp"
+          titel="Michael Stoltze: Danske Dagsommerfugle"
+          pris="450 Kr."
+        />
+        <Card3
+          cardimage="/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp"
+          titel="Michael Stoltze: Danske Dagsommerfugle"
+          pris="450 Kr."
+        />
+        <Card3
+          cardimage="/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp"
+          titel="Michael Stoltze: Danske Dagsommerfugle"
+          pris="450 Kr."
+        />
+        <Card3
+          cardimage="/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp"
+          titel="Michael Stoltze: Danske Dagsommerfugle"
+          pris="450 Kr."
+        />
+        <Card3
+          cardimage="/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp"
           titel="Michael Stoltze: Danske Dagsommerfugle"
           pris="450 Kr."
         />

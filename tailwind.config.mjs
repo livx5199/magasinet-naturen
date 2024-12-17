@@ -89,6 +89,7 @@ export default {
         },
         
         borderRadius: {
+            none: "0px",
             rounded: "10px"
         },
         
