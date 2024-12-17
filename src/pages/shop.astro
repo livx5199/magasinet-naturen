@@ -40,21 +40,21 @@ import { Image } from "astro:assets";
       <div class="flex gap-large flex-wrap justify-center">
         <Card3
           cardimage="/images/shop/magasinetnaturen-1.webp"
-          titel="Michael Stoltze: Danske Dagsommerfugle"
-          pris="450 Kr."
+          titel="Magasinet Naturen nr. 1"
+          pris="175 kr."
           tilbud=""
           variant="secondary"
         />
         <Card3
           cardimage="/images/shop/magasinetnaturen-2magasiner.webp"
-          titel="Michael Stoltze: Danske Dagsommerfugle"
-          pris="450 Kr."
+          titel="Magasinet Naturen abonnement, 1 år (2 udgivelser)"
+          pris="295,00 kr. / år"
           tilbud=""
         />
         <Card3
           cardimage="/images/shop/magasinetnaturen-5magasiner.webp"
-          titel="Michael Stoltze: Danske Dagsommerfugle"
-          pris="450 Kr."
+          titel="5 x Magasinet Naturen abonnement"
+          pris="1.395,00 kr. / år"
           tilbud="5 for 4 abonnementers pris"
           variant="primary"
         />
@@ -62,32 +62,33 @@ import { Image } from "astro:assets";
     </div>
 
     <div class="flex flex-col gap-medium section-mobile lg:section-desktop">
-      <div class="flex flex-col">
+      <div class="flex flex-col justify-center">
         <h2>Andre produkter</h2>
         <h3>
           Støt vores arbejde med flotte tillæg til væggen, garderoben eller
           bogreolen
         </h3>
       </div>
-      <div class="flex gap-large flex-wrap justify-center">
+      <div class="flex gap-medium flex-wrap justify-center">
         <div
-          class="flex flex-col rounded-rounded p-10 bg-brown-200 drop-shadow gap-medium"
+          class="flex flex-col rounded-rounded p-7 w-64 bg-brown-200 drop-shadow gap-medium"
         >
           <div class="flex flex-col">
             <h3>Søg</h3>
-            <div class="flex">
+            <div class="flex w-fill">
               <input
                 type="text"
-                class="bg-brown-50 rounded-l-rounded rounded-r-none"
+                class="bg-brown-50 rounded-l-rounded rounded-r-none w-44"
               /><button class="bg-brown-50 p-2 rounded-r-rounded"
                 ><Image
-                  alt="Magasinet Naturen logo"
+                  alt="Grafik af lup"
                   src={lup}
                   class="w-4 fill-brown-800"
                 /></button
               >
             </div>
-          </div><div class="flex flex-col gap-small">
+          </div>
+          <div class="flex flex-col gap-small">
             <h3>Sortér</h3>
             <div class="flex flex-col">
               <label for="produkter">Produktkategori</label>
@@ -111,28 +112,45 @@ import { Image } from "astro:assets";
         </div>
         <Card3
           cardimage="/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp"
-          titel="Michael Stoltze: Danske Dagsommerfugle"
+          titel="Stoltze: Danske Dagsommerfugle"
           pris="450 Kr."
+          tilbud="Tilbud"
+          variant="primary"
+          gammelpris="495 kr."
         />
         <Card3
-          cardimage="/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp"
-          titel="Michael Stoltze: Danske Dagsommerfugle"
-          pris="450 Kr."
+          cardimage="/images/shop/plakat.webp"
+          titel="Magasinet Naturen plakat"
+          pris="250 kr."
         />
         <Card3
-          cardimage="/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp"
-          titel="Michael Stoltze: Danske Dagsommerfugle"
-          pris="450 Kr."
+          cardimage="/images/shop/noctuidae-europaeae-essential-bog-shop.webp"
+          titel="Top, Fritsch, Kononenko: Noctuidae Eupaeae Essential"
+          pris="1.450,00 kr."
+          gammelpris="1.495,00 kr."
+          tilbud="Tilbud"
+          variant="primary"
         />
         <Card3
-          cardimage="/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp"
-          titel="Michael Stoltze: Danske Dagsommerfugle"
-          pris="450 Kr."
+          cardimage="/images/shop/t-shirt-froe.webp"
+          titel="Magasinet Naturen T-shirt: Grønbroget tudse"
+          pris="299 kr."
+        />
+
+        <Card3
+          cardimage="/images/shop/t-shirt-loevetandspinder.webp"
+          titel="Magasinet Naturen T-shirt: Løvetandspinder"
+          pris="299 kr."
         />
         <Card3
-          cardimage="/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp"
-          titel="Michael Stoltze: Danske Dagsommerfugle"
-          pris="450 Kr."
+          cardimage="/images/shop/t-shirt-stenvender.webp"
+          titel="Magasinet Naturen T-shirt: Stenvender"
+          pris="299 kr."
+        />
+        <Card3
+          cardimage="/images/shop/t-shirt-sildehaj.webp"
+          titel="Magasinet Naturen T-shirt: Sildehaj"
+          pris="299 kr."
         />
       </div>
     </div>

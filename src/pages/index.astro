@@ -41,7 +41,7 @@ import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
   </section>
 
   <section
-    class="sektion-2 flex flex-col items-center lg:grid lg:grid-cols-4 lg:grid-rows-4 gap-small"
+    class="sektion-2 flex flex-col items-center lg:grid lg:grid-cols-4 lg:grid-rows-4 gap-small fade"
   >
     <div
       class="lg:col-start-1 lg:col-span-4 lg:row-start-2 lg:row-span-2 bg-green-500 h-full"
@@ -109,7 +109,7 @@ import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
   </section>
 
   <section
-    class="flex flex-col section-mobile lg:section-desktop bg-green-500 items-center gap-medium"
+    class="flex flex-col section-mobile lg:section-desktop bg-green-500 items-center gap-medium fade mt-large"
   >
     <div class="text-center lg:w-3/5">
       <h1>Skal du have det hele med?</h1>
@@ -134,22 +134,28 @@ import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
       <Card3
         cardimage="/images/shop/plakat.webp"
         titel="Magasinet Naturen plakat"
-        pris="250 Kr."
+        pris="250 kr."
       />
       <Card3
         cardimage="/images/shop/noctuidae-europaeae-essential-bog-shop.webp"
         titel="Top, Fritsch, Kononenko: Noctuidae Europaeae Essential"
-        pris="1.450 Kr."
+        pris="1.450 kr."
+        gammelpris="1.495,00 kr."
+        tilbud="Tilbud"
+        variant="primary"
       />
       <Card3
         cardimage="/images/shop/t-shirt-froe.webp"
-        titel="T-SHIRT - GRØNBROGET TUDSE"
-        pris="299 Kr."
+        titel="Magasinet Naturen T-shirt: GRØNBROGET TUDSE"
+        pris="299 kr."
       />
       <Card3
         cardimage="/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp"
-        titel="Michael Stoltze: Danske Dagsommerfugle"
-        pris="450 Kr."
+        titel="Stoltze: Danske Dagsommerfugle"
+        pris="450 kr."
+        tilbud="Tilbud"
+        variant="primary"
+        gammelpris="495 kr."
       />
     </div>
     <div class="self-end">
@@ -168,3 +174,12 @@ import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
     }
   }
 </style>
+
+<script>
+  /* Import af Motion One biblioteket */
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+
+  inView(".fade", () => {
+    animate(".fade", { y: [50, 0], opacity: [0, 1] }, { duration: 1.5 });
+  });
+</script>

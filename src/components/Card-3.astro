@@ -11,6 +11,7 @@ const {
   pris = "",
   tilbud = "",
   variant = "",
+  gammelpris = "",
 } = Astro.props;
 ---
 
@@ -32,10 +33,15 @@ const {
     class="flex flex-col justify-between bg-brown-50 row-start-4 row-span-2 col-start-1 col-span-2 p-3 rounded-b-rounded"
   >
     <div class="flex flex-col gap-small">
-      <h3 class="self-center text-medium">
+      <h3 class="text-medium">
         {titel}
       </h3>
-      <h4 class="text-small">{pris}</h4>
+      <div class="flex">
+        <h4 class="text-small line-through text-green-800 mr-1">
+          {gammelpris}
+        </h4>
+        <h4 class="text-small">{pris}</h4>
+      </div>
     </div><div class="self-end">
       <Button variant="primary">SE VARE</Button>
     </div>

@@ -89,7 +89,7 @@
   }
 
   select {
-    @apply bg-brown-50 p-3 rounded-rounded font-standard;
+    @apply bg-brown-50 p-3 rounded-rounded font-standard text-xsmall;
   }
 
   select > option {
