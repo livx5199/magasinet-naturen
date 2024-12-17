@@ -96,20 +96,17 @@ export default {
         boxShadow: {
             drop25: "4px 4px 4px 0 rgb(0 0 0 / 0.25)" /* x y blur spread farve / opacity */,
           },
-    },
+    
     extend: {
             
         spacing: {
-            small: "1rem",
-            medium: "2rem",
-            large: "3rem",
-            xlarge: "4rem",
+            "section-vertical": "2rem",
+            "section-horizontal": "5rem",
+            "m-section-vertical": "1rem",
+            "m-section-horizontal": "2.5rem",
         },
-        height: {
-            card1: "5rem",
-          },
 
-        },
+        },},
 	}
 	plugins: [
         require('@tailwindcss/typography'),

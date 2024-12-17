@@ -46,6 +46,16 @@
     @apply font-display;
   }
 
+  /* Spacing */
+
+  .section-desktop {
+    @apply pl-section-horizontal pr-section-horizontal pt-section-vertical pb-section-vertical;
+  }
+
+  .section-mobile {
+    @apply pl-m-section-horizontal pr-m-section-horizontal pt-m-section-vertical pb-m-section-vertical;
+  }
+
   /* Forms */
 
   input {
@@ -77,6 +87,16 @@
   .kasse input[type="checkbox"]:checked {
     @apply bg-brown-950;
   }
+
+  select {
+    @apply bg-brown-50 p-3 rounded-rounded font-standard;
+  }
+
+  select > option {
+    @apply bg-brown-50 p-3 rounded-rounded font-standard;
+  }
+
+  /* Animations */
 
   .fade-up {
     animation-name: fade-up;

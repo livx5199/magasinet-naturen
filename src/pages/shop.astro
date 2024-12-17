@@ -17,7 +17,7 @@ import { Image } from "astro:assets";
 
 <MainLayout title="Shop">
   <section class="flex flex-col gap-5">
-    <div class="flex flex-col gap-2 p-20">
+    <div class="flex flex-col gap-2 section-mobile lg:section-desktop">
       <h1>Shop</h1>
       <h3>
         Her kan du tegne abonnement på Magasinet Naturen, eller gå på opdagelse
@@ -33,9 +33,11 @@ import { Image } from "astro:assets";
       </p>
     </div>
 
-    <div class="flex flex-col gap-5 p-20 bg-brown-200">
+    <div
+      class="flex flex-col gap-5 section-mobile lg:section-desktop bg-brown-200"
+    >
       <h2>Abonnement på Magasinet Naturen</h2>
-      <div class="flex gap-10 flex-wrap">
+      <div class="flex gap-10 flex-wrap justify-center">
         <Card3
           cardimage="/images/shop/magasinetnaturen-1.webp"
           titel="Michael Stoltze: Danske Dagsommerfugle"
@@ -54,7 +56,7 @@ import { Image } from "astro:assets";
       </div>
     </div>
 
-    <div class="flex flex-col gap-5 p-20">
+    <div class="flex flex-col gap-5 section-mobile lg:section-desktop">
       <div class="flex flex-col">
         <h2>Andre produkter</h2>
         <h3>
@@ -62,9 +64,9 @@ import { Image } from "astro:assets";
           bogreolen
         </h3>
       </div>
-      <div class="flex gap-10 flex-wrap">
+      <div class="flex gap-10 flex-wrap justify-center">
         <div
-          class="flex flex-col rounded-rounded p-10 bg-brown-200 drop-shadow"
+          class="flex flex-col rounded-rounded p-10 bg-brown-200 drop-shadow gap-5"
         >
           <div class="flex flex-col">
             <h3>Søg</h3>
@@ -79,6 +81,26 @@ import { Image } from "astro:assets";
                   class="w-4 fill-brown-800"
                 /></button
               >
+            </div>
+          </div><div class="flex flex-col gap-2">
+            <h3>Sortér</h3>
+            <div class="flex flex-col">
+              <label for="produkter">Produktkategori</label>
+
+              <select name="produkter">
+                <option value="tøj">Tøj</option>
+                <option value="dekoration">Dekoration</option>
+                <option value="bøger">Bøger</option>
+              </select>
+            </div>
+            <div class="flex flex-col">
+              <label for="sortering">Sorteringsmuligheder</label>
+
+              <select name="sortering">
+                <option value="pris1">Pris - Højest til lavest</option>
+                <option value="pris2">Pris - Lavest til højest</option>
+                <option value="tilbud">Tilbud</option>
+              </select>
             </div>
           </div>
         </div>
