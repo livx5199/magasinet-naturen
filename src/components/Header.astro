@@ -10,10 +10,15 @@ import lup from "../assets/images/grafikker/lup.svg";
 <section
   class="bg-brown-900 p-5 flex items-center justify-between desktop-menu"
 >
-  <a href="https://www.hojskolendk.dk"
-    ><Image alt="Magasinet Naturen logo" src={logo} class="w-24" /></a
-  >
-  <ul class="flex text-brown-50 gap-4 pl-14">
+  <div class="flex gap-2">
+    <a href="/"
+      ><Image alt="Magasinet Naturen logo" src={logo} class="w-24" /></a
+    >
+    <p class="text-xsmall font-display self-end text-brown-200 uppercase">
+      Indsigt og viden om danmarks vilde natur
+    </p>
+  </div>
+  <ul class="flex text-brown-50 gap-4 pr-32">
     <li class="list-none navtext"><a href="/">FORSIDE</a></li>
     <li class="list-none navtext">ARTIKLER</li>
     <li class="list-none navtext"><a href="/om-os">OM OS</a></li>
