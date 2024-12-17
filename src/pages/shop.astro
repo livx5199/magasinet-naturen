@@ -1,0 +1,57 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import bogsommerfugle from "../assets/images/shop/danske-dagsommerfugle-michael-stoltze-bog.webp";
+import magasinetnaturen1 from "../assets/images/shop/magasinetnaturen-1.webp";
+import magasinetnaturen2 from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
+import magasinetnaturen3 from "../assets/images/shop/magasinetnaturen-5magasiner.webp";
+import bognoctuidae from "../assets/images/shop/noctuidae-europaeae-essential-bog-shop.webp";
+import plakat from "../assets/images/shop/plakat.webp";
+import tshirtfroe from "../assets/images/shop/t-shirt-froe.webp";
+import tshirtloevetand from "../assets/images/shop/t-shirt-loevetandspinder.webp";
+import tshirtsildehaj from "../assets/images/shop/t-shirt-sildehaj.webp";
+import tshirtstenvender from "../assets/images/shop/t-shirt-stenvender.webp";
+import Card3 from "../components/Card-3.astro";
+import { Image } from "astro:assets";
+---
+
+<MainLayout title="Shop">
+  <section class="flex flex-col gap-5">
+    <div class="flex flex-col gap-2 p-20">
+      <h1>Shop</h1>
+      <h3>
+        Her kan du tegne abonnement på Magasinet Naturen, eller gå på opdagelse
+        i vores mange andre produkter.
+      </h3>
+      <p>
+        Tak fordi du støtter op om vores arbejde, og deler vores glæde ved den
+        vilde danske natur!
+      </p>
+      <p class="text-xsmall">
+        Er du i tvivl om, hvordan du tegner abonnement på Magasinet Naturen, så
+        kan du finde hjælp i denne lille vejledning.
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-5 p-20 bg-brown-200">
+      <h3>Abonnement på Magasinet Naturen</h3>
+      <div class="flex justify-between">
+        <Card3
+          cardimage="../images/shop/magasinetnaturen-1.webp"
+          titel="Michael Stoltze: Danske Dagsommerfugle"
+          pris="450 Kr."
+        />
+        <Card3
+          cardimage="src/assets/images/shop/magasinetnaturen-2magasiner.webp"
+          titel="Michael Stoltze: Danske Dagsommerfugle"
+          pris="450 Kr."
+        />
+        <Card3
+          cardimage="src/assets/images/shop/magasinetnaturen-5magasiner.webp"
+          titel="Michael Stoltze: Danske Dagsommerfugle"
+          pris="450 Kr."
+        />
+      </div>
+    </div>
+  </section>
+</MainLayout>
