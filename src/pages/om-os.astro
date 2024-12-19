@@ -40,7 +40,7 @@ import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
       </h4>
     </div>
     <div
-      class="flex flex-col p-5 lg:p-10 lg:w-2/6 bg-brown-300 gap-medium rounded-rounded drop-shadow"
+      class="flex flex-col p-5 lg:p-10 lg:w-2/6 bg-brown-300 gap-medium rounded-rounded drop-shadow fade"
     >
       <h3>Læs om os i medierne</h3>
       <div class="p-5 bg-brown-100 rounded-rounded drop-shadow scale-animation">
@@ -65,7 +65,7 @@ import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
   </section>
 
   <section
-    class="flex flex-col section-mobile lg:section-desktop pt-medium bg-green-500 items-center gap-medium mb-10"
+    class="flex flex-col section-mobile lg:section-desktop pt-medium bg-green-500 items-center gap-medium mb-10 fade"
   >
     <div class="text-center lg:w-3/5">
       <h2>
@@ -82,3 +82,12 @@ import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
     </div>
   </section>
 </MainLayout>
+
+<script>
+  /* Import af Motion One biblioteket */
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+
+  inView(".fade", () => {
+    animate(".fade", { y: [50, 0], opacity: [0, 1] }, { duration: 1.5 });
+  });
+</script>

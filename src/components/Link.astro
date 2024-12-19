@@ -3,10 +3,10 @@
 const { href = "#", target = "_self" } = Astro.props;
 ---
 
-<a href={href} target={target}>
-  <div class="inline-block">
-    <div class="link-animation inline-block w-full h-full hover:text-brown-50">
-      <slot class="" />
-    </div>
-  </div>
+<a
+  href={href}
+  target={target}
+  class="hover:hover:transition duration-300 hover:bg-green-500"
+>
+  <slot />
 </a>

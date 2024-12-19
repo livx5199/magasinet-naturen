@@ -98,6 +98,75 @@
 
   /* Animations */
 
+  .bille {
+    background-image: url("/public/images/graphics/bille-origin.svg");
+    background-repeat: no-repeat;
+    max-width: 100%;
+    rotate: -120deg;
+    animation-name: bille-stille;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+  }
+
+  .bille-flyv {
+    animation-name: bille-flyv;
+    animation-iteration-count: initial;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+  }
+
+  @keyframes bille-flyv {
+    0% {
+      transform: translateX(0px);
+      transform: translateY(0px);
+    }
+
+    100% {
+      /* transform: translateX(-50px); */
+      transform: translateY(-300px);
+      rotate: -280deg;
+    }
+  }
+
+  @keyframes bille-stille {
+    90% {
+      background-image: url("/public/images/graphics/bille-second.svg");
+      scale: 1;
+    }
+    92% {
+      background-image: url("/public/images/graphics/bille-origin.svg");
+      scale: 1.1;
+    }
+    94% {
+      background-image: url("/public/images/graphics/bille-second.svg");
+    }
+    96% {
+      background-image: url("/public/images/graphics/bille-origin.svg");
+      scale: 1;
+    }
+
+    98% {
+      background-image: url("/public/images/graphics/bille-second.svg");
+    }
+  }
+
+  .bille-hover {
+    animation-name: bille-hover;
+    animation-iteration-count: infinite;
+    animation-duration: 0.1s;
+    scale: 1.05;
+  }
+
+  @keyframes bille-hover {
+    from {
+      background-image: url("/public/images/graphics/bille-spredte-vinger.svg");
+    }
+    to {
+      background-image: url("/public/images/graphics/bille-origin.svg");
+    }
+  }
+
   .fade-up {
     animation-name: fade-up;
     animation-duration: 0.5s;

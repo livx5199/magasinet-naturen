@@ -7,11 +7,36 @@ import Card3 from "../components/Card-3.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
+import taleboble from "/public/images/graphics/taleboble.svg";
 ---
 
 <MainLayout title="Magasinet Naturen">
+  <div
+    class="fixed w-[17rem] top-[5rem] right-0 grid grid-cols-3 grid-rows-2 p-small z-10"
+  >
+    <div
+      class="col-start-1 col-span-2 row-start-1 row-span-2 w-40 ml-12 items-end grid grid-cols-1 grid-rows-1"
+    >
+      <Image
+        alt="Taleboble"
+        src={taleboble}
+        class="w-56 h-full col-start-1 row-start-1"
+      />
+      <p class="col-start-1 row-start-1 self-center pl-3 pr-3">
+        Psst! Bliv abonnent for kun 295,- om året: <Link href="/shop"
+          >Klik her!</Link
+        >
+      </p>
+    </div>
+    <div
+      class="col-start-3 col-span-1 row-start-2 row-span-1 w-10 bille ml-12 mt-2 hover:bille-hover"
+      id="klikbille"
+    >
+    </div>
+  </div>
+
   <section
-    class="section-mobile lg:section-desktop flex flex-col gap-7 justify-center pt-medium"
+    class="section-mobile lg:section-desktop flex flex-col gap-7 justify-center pt-medium relative"
   >
     <div class="flex self-center">
       <h1 class="">NYESTE HISTORIER</h1>
@@ -130,7 +155,9 @@ import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
     </div>
   </section>
 
-  <section class="flex flex-col gap-medium section-mobile lg:section-desktop">
+  <section
+    class="flex flex-col gap-medium section-mobile lg:section-desktop pt-medium"
+  >
     <div>
       <h2>Nyheder i shoppen</h2>
       <h3>Støt vores arbejde med flotte ting til hjemmet og til hjernen.</h3>
@@ -193,4 +220,15 @@ import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
   inView(".fade", () => {
     animate(".fade", { y: [50, 0], opacity: [0, 1] }, { duration: 1.5 });
   });
+
+  window.onload = function () {
+    const bille = document.getElementById("klikbille");
+    bille.addEventListener("click", flyv);
+
+    function flyv() {
+      console.log(bille);
+      bille.classList.add("bille-flyv");
+      // bille.classList.add("bille-hover");
+    }
+  };
 </script>

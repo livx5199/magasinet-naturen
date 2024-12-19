@@ -26,7 +26,7 @@ import { Image } from "astro:assets";
     </div>
 
     <div
-      class="flex flex-col gap-small pt-medium section-mobile lg:section-desktop bg-green-500"
+      class="flex flex-col gap-small pt-medium section-mobile lg:section-desktop bg-green-500 fade"
     >
       <h2 class="self-center text-center">Abonnement på Magasinet Naturen</h2>
       <div class="flex flex-wrap justify-center gap-small">
@@ -160,19 +160,11 @@ import { Image } from "astro:assets";
   </section>
 </MainLayout>
 
-<!-- <script>
-  var container = document.querySelectorAll("container");
+<script>
+  /* Import af Motion One biblioteket */
+  import { animate, stagger, inView, scroll, timeline } from "motion";
 
-  container.forEach((element) => {
-    const tilbudscontainer = element.getElementById("tilbudscontainer");
-    const tilbudstekst = element.getElementById("tilbudstekst");
-
-    if (tilbudstekst.textContent.trim() === "") {
-      console.log("The element is empty.");
-      tilbudscontainer.style.display = "none";
-    } else {
-      console.log("The element is not empty.");
-      tilbudscontainer.style.display = "block";
-    }
+  inView(".fade", () => {
+    animate(".fade", { y: [50, 0], opacity: [0, 1] }, { duration: 1.5 });
   });
-</script> -->
+</script>
