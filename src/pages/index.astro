@@ -8,6 +8,7 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import magasiner from "/public/images/shop/magasinetnaturen-2magasiner.webp";
 import taleboble from "/public/images/graphics/taleboble.svg";
+import svamp from "/public/images/graphics/svamp.svg";
 ---
 
 <MainLayout title="Magasinet Naturen">
@@ -24,7 +25,7 @@ import taleboble from "/public/images/graphics/taleboble.svg";
         class="w-56 h-full col-start-1 row-start-1"
       />
       <p class="col-start-1 row-start-1 self-center pl-3 pr-3">
-        Psst! Bliv abonnent for kun 295,- om året: <Link href="/shop"
+        Psst! Bliv abonnent for kun 295,- om året: <Link href="/produkt"
           >Klik her!</Link
         >
       </p>
@@ -131,19 +132,19 @@ import taleboble from "/public/images/graphics/taleboble.svg";
         titel="Havørneunger på Vestbornholm"
         underrubrik="Havørnen forsvandt som dansk ynglefugl for godt hundrede år  siden. Arten kom først for alvor  på listen over danske ynglefugle igen i 1996."
       />
-      <!-- <Card2
-        cardimage="src/assets/images/artikler/hvaler-i-havet-omkring-danmark-magasinet-naturen-768x432.webp"
-        tema="Fauna"
-        temakortvariant="fauna"
-        titel="Hvaler i havet omkring Danmark"
-        underrubrik="Årligt er der meldinger om hvaler i danske farvande, der ikke tilhører de vanlige tre: marsvin, hvidnæse og vågehval."
-      /> -->
     </div>
   </section>
 
   <section
     class="flex flex-col section-mobile lg:section-desktop bg-green-500 items-center gap-medium fade pt-medium"
   >
+    <div>
+      <Image
+        alt="Taleboble"
+        src={svamp}
+        class="w-10 h-full col-start-1 row-start-1"
+      />
+    </div>
     <div class="text-center lg:w-3/5">
       <h1>Skal du have det hele med?</h1>
       <h3 class="pt-3">
@@ -152,7 +153,7 @@ import taleboble from "/public/images/graphics/taleboble.svg";
       </h3>
     </div>
     <div>
-      <Button>LÆS MERE OM ABONNEMENT</Button>
+      <Button><a href="/produkt">LÆS MERE OM ABONNEMENT</a></Button>
     </div>
   </section>
 

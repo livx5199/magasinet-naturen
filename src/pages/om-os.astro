@@ -6,7 +6,7 @@ import bnlogo from "../assets/images/logoer/bnlogo.webp";
 import Card3 from "../components/Card-3.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
+import bille from "/public/images/graphics/bille-seethrough.svg";
 ---
 
 <MainLayout title="Om os">
@@ -67,6 +67,7 @@ import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
   <section
     class="flex flex-col section-mobile lg:section-desktop pt-medium bg-green-500 items-center gap-medium mb-10 fade"
   >
+    <div><Image alt="Grafik af bille" src={bille} class="w-9" /></div>
     <div class="text-center lg:w-3/5">
       <h2>
         Magasinet Naturen kan købes både som abonnement og i løssalg her på
@@ -78,7 +79,7 @@ import magasiner from "../assets/images/shop/magasinetnaturen-2magasiner.webp";
       </h4>
     </div>
     <div>
-      <Button>BLIV ABONNENT</Button>
+      <Button><a href="/shop">BLIV ABONNENT</a></Button>
     </div>
   </section>
 </MainLayout>
