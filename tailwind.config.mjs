@@ -102,7 +102,7 @@ export default {
         spacing: {
             "section-vertical": "4rem",
             "section-horizontal": "10rem",
-            "m-section-vertical": "1rem",
+            "m-section-vertical": "1.5rem",
             "m-section-horizontal": "2.5rem",
             "small": "1rem",
             "medium": "3rem",

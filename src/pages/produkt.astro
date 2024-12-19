@@ -13,64 +13,38 @@ import { Image } from "astro:assets";
 
 <MainLayout title="Produkt">
   <section
-    class="flex flex-col lg:flex-row section-mobile lg:section-desktop gap-medium pt-medium"
+    class="lg:flex grid lg:flex-row section-mobile lg:section-desktop gap-medium pt-medium"
   >
-    <div class="grid grid-cols-3 grid-rows-4 lg:w-2/5">
+    <div class="grid grid-cols-4 grid-rows-4 lg:w-2/5 gap-1 row-start-2">
       <Image
         alt="Billede af to udgaver af Magasinet Naturen"
         src={magasiner}
-        class="w-full col-start-1 col-span-3 row-start-1 row-span-3 z-10"
-        id="stortbillede1"
+        class="w-full col-start-1 col-span-4 row-start-1 row-span-3 rounded-rounded"
+        id="stortbillede"
       />
       <Image
         alt="Billede af to udgaver af Magasinet Naturen"
-        src={magasiner2}
-        class="w-full col-start-1 col-span-3 row-start-1 row-span-3"
-        id="stortbillede2"
-      />
-      <Image
-        alt="Billede af to udgaver af Magasinet Naturen"
-        src={magasiner3}
-        class="w-full col-start-1 col-span-3 row-start-1 row-span-3"
-        id="stortbillede3"
-      />
-      <Image
-        alt="Billede af to udgaver af Magasinet Naturen"
-        src={magasiner4}
-        class="w-full col-start-1 col-span-3 row-start-1 row-span-3"
-        id="stortbillede4"
-      />
-      <Image
-        alt="Billede af en artikel i Magasinet Naturen"
-        src={magasiner2}
-        class="w-full col-start-1 col-span-1 row-start-4 row-span-1"
+        src={magasiner}
+        class="w-full col-start-1 col-span-1 row-start-4 row-span-1 hover:opacity-90 cursor-pointer rounded-rounded drop-shadow"
         id="lillebillede1"
       />
       <Image
-        alt="Billede af en artikel i Magasinet Naturen"
-        src={magasiner}
-        class="w-full col-start-1 col-span-1 row-start-4 row-span-1"
-        id="lillebillede1-main"
+        alt="Billede af to udgaver af Magasinet Naturen"
+        src={magasiner2}
+        class="w-full col-start-2 col-span-1 row-start-4 row-span-1 hover:opacity-90 cursor-pointer rounded-rounded"
+        id="lillebillede2"
       />
       <Image
-        alt="Billede af en artikel i Magasinet Naturen"
+        alt="Billede af to udgaver af Magasinet Naturen"
         src={magasiner3}
-        class="w-full col-start-2 col-span-1 row-start-4 row-span-1"
+        class="w-full col-start-3 col-span-1 row-start-4 row-span-1 hover:opacity-90 cursor-pointer rounded-rounded"
+        id="lillebillede3"
       />
       <Image
-        alt="Billede af en artikel i Magasinet Naturen"
-        src={magasiner}
-        class="w-full col-start-1 col-span-1 row-start-4 row-span-1"
-      />
-      <Image
-        alt="Billede af en artikel i Magasinet Naturen"
+        alt="Billede af to udgaver af Magasinet Naturen"
         src={magasiner4}
-        class="w-full col-start-3 col-span-1 row-start-4 row-span-1"
-      />
-      <Image
-        alt="Billede af en artikel i Magasinet Naturen"
-        src={magasiner}
-        class="w-full col-start-1 col-span-1 row-start-4 row-span-1"
+        class="w-full col-start-4 col-span-1 row-start-4 row-span-1 hover:opacity-90 cursor-pointer rounded-rounded"
+        id="lillebillede4"
       />
     </div>
     <div class="flex flex-col lg:w-3/5">
@@ -137,11 +111,42 @@ import { Image } from "astro:assets";
 </MainLayout>
 
 <script>
-  const billede1 = document.getElementById("stortbillede1");
-  const billede2 = document.getElementById("stortbillede2");
-  const billede3 = document.getElementById("stortbillede3");
-  const billede4 = document.getElementById("stortbillede4");
+  var stortbillede = document.getElementById(
+    "stortbillede"
+  ) as HTMLImageElement;
 
-  const lillebillede1 = document.getElementById("lillebillede1");
-  const lillebillede1main = document.getElementById("lillebillede1-main");
+  const lillebillede1 = document.getElementById(
+    "lillebillede1"
+  ) as HTMLImageElement;
+
+  const lillebillede2 = document.getElementById(
+    "lillebillede2"
+  ) as HTMLImageElement;
+  const lillebillede3 = document.getElementById(
+    "lillebillede3"
+  ) as HTMLImageElement;
+  const lillebillede4 = document.getElementById(
+    "lillebillede4"
+  ) as HTMLImageElement;
+
+  lillebillede1.addEventListener("click", billede1);
+  lillebillede2.addEventListener("click", billede2);
+  lillebillede3.addEventListener("click", billede3);
+  lillebillede4.addEventListener("click", billede4);
+
+  function billede1() {
+    stortbillede.src = lillebillede1.src;
+  }
+
+  function billede2() {
+    stortbillede.src = lillebillede2.src;
+  }
+
+  function billede3() {
+    stortbillede.src = lillebillede3.src;
+  }
+
+  function billede4() {
+    stortbillede.src = lillebillede4.src;
+  }
 </script>

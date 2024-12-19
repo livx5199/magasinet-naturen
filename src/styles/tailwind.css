@@ -129,4 +129,21 @@
       transform: scale(1.05);
     }
   }
+
+  .link-animation:hover {
+    animation-name: link;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes link {
+    from {
+      width: 0;
+      background-color: black;
+    }
+
+    to {
+      width: 100%;
+      background-color: black;
+    }
+  }
 }
