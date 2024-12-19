@@ -16,6 +16,7 @@ import taleboble from "/public/images/graphics/taleboble.svg";
   >
     <div
       class="col-start-1 col-span-2 row-start-1 row-span-2 w-40 ml-12 items-end grid grid-cols-1 grid-rows-1"
+      id="taleboble"
     >
       <Image
         alt="Taleboble"
@@ -29,7 +30,7 @@ import taleboble from "/public/images/graphics/taleboble.svg";
       </p>
     </div>
     <div
-      class="col-start-3 col-span-1 row-start-2 row-span-1 w-10 bille ml-12 mt-2 hover:bille-hover"
+      class="col-start-3 col-span-1 row-start-2 row-span-1 w-10 bille ml-12 mt-2 cursor-pointer"
       id="klikbille"
     >
     </div>
@@ -223,12 +224,26 @@ import taleboble from "/public/images/graphics/taleboble.svg";
 
   window.onload = function () {
     const bille = document.getElementById("klikbille");
-    bille.addEventListener("click", flyv);
+    bille.addEventListener("mouseover", hover);
+    bille.addEventListener("mouseout", stop);
 
-    function flyv() {
+    function hover() {
       console.log(bille);
-      bille.classList.add("bille-flyv");
-      // bille.classList.add("bille-hover");
+      bille.classList.add("bille-hover");
+      bille.addEventListener("click", flyv);
+
+      function flyv() {
+        const taleboble = document.getElementById("taleboble");
+
+        bille.classList.remove("bille-hover");
+        bille.classList.add("bille-flyv");
+        taleboble.classList.add("bobleud");
+        // bille.classList.add("bille-hover");
+      }
+    }
+
+    function stop() {
+      bille.classList.remove("bille-hover");
     }
   };
 </script>

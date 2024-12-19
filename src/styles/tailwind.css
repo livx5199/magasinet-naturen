@@ -105,7 +105,7 @@
     rotate: -120deg;
     animation-name: bille-stille;
     animation-iteration-count: infinite;
-    animation-duration: 6s;
+    animation-duration: 5s;
   }
 
   .bille-flyv {
@@ -196,6 +196,28 @@
 
     to {
       transform: scale(1.05);
+    }
+  }
+
+  .bobleud {
+    animation-name: bobleud;
+    animation-iteration-count: initial;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+  }
+
+  @keyframes bobleud {
+    0% {
+      scale: 1;
+    }
+
+    20% {
+      scale: 1.2;
+    }
+
+    100% {
+      scale: 0;
     }
   }
 
